@@ -1,0 +1,758 @@
+{% comment %}
+  ============================================================
+  MX HOME — SISTEMA DE DISEÑO UNIFICADO
+  ============================================================
+  Una sola fuente de verdad para tipografía, colores y espacios
+  de la página principal de Maximus Inc.
+  Coloca esta sección como la PRIMERA del index.json.
+  ============================================================
+{% endcomment %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://loox.io" crossorigin>
+<link rel="dns-prefetch" href="https://loox.io">
+<link rel="dns-prefetch" href="https://cdn.loox.io">
+<link rel="dns-prefetch" href="https://api.loox.io">
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+{%- comment -%}
+  Async font loading via media="print" trick. Browser downloads but doesn't block render.
+  Falls back to <noscript> if JavaScript disabled.
+{%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"></noscript>
+
+<style>
+  :root {
+    --mx-bg:            #f7f6f2;
+    --mx-bg-alt:        #efeee8;
+    --mx-bg-card:       #ffffff;
+    --mx-heading:       #0c0b0a;
+    --mx-text:          #494640;
+    --mx-text-soft:     #767068;
+    --mx-text-mute:     #5f5a52;
+    --mx-gold:          #b79446;
+    --mx-gold-soft:     rgba(183,148,70,0.42);
+    --mx-gold-faint:    rgba(183,148,70,0.13);
+    --mx-border:        #d7d2c6;
+    --mx-success:       #3A8735;
+    --mx-whatsapp:      #25D366;
+    --mx-whatsapp-h:    #1ebe5a;
+
+    --mx-font-display:  'Bebas Neue', 'Roboto Condensed', sans-serif;
+    --mx-font-accent:   var(--mx-font-display);
+    --mx-font-body:     'DM Sans', 'Roboto', system-ui, sans-serif;
+
+    --mx-pad-y:         80px;
+    --mx-pad-x:         24px;
+    --mx-pad-y-sm:      56px;
+    --mx-pad-x-sm:      16px;
+    --mx-container:     1200px;
+  }
+
+  /* ============== SECCIÓN BASE ============== */
+  .mx-section {
+    background: var(--mx-bg);
+    padding: var(--mx-pad-y) var(--mx-pad-x);
+    font-family: var(--mx-font-body);
+    color: var(--mx-text);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .mx-section--alt   { background: var(--mx-bg-alt); }
+  .mx-section--white { background: var(--mx-bg-card); }
+
+  .mx-section__inner {
+    max-width: var(--mx-container);
+    margin: 0 auto;
+    position: relative;
+  }
+  .mx-section__inner--narrow { max-width: 1060px; }
+  .mx-section__inner--md     { max-width: 1100px; }
+
+  /* ============== HEADER UNIFICADO ============== */
+  .mx-section__head {
+    text-align: center;
+    margin-bottom: 56px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mx-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mx-font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--mx-gold);
+    margin: 0 0 18px;
+  }
+  .mx-eyebrow::before,
+  .mx-eyebrow::after {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--mx-gold-soft);
+  }
+  .mx-eyebrow--solo::before,
+  .mx-eyebrow--solo::after { display: none; }
+
+  .mx-title {
+    font-family: var(--mx-font-display);
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--mx-heading);
+    margin: 0 0 16px;
+    line-height: 0.96;
+  }
+  .mx-title__accent {
+    color: var(--mx-gold) !important;
+    font-family: var(--mx-font-display) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    line-height: 0.96;
+    position: relative;
+    display: inline-block;
+    padding: 0 0.02em 0.09em;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mx-title__accent::after {
+    content: '';
+    position: absolute;
+    left: 0.04em;
+    right: 0.04em;
+    bottom: 0.03em;
+    height: 0.038em;
+    min-height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(183,148,70,0.5) 8%, #d4b766 50%, rgba(183,148,70,0.86) 92%, transparent);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .mx-subtitle {
+    font-family: var(--mx-font-body);
+    font-size: 15px;
+    color: var(--mx-text-mute);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ============== BOTONES UNIFICADOS ============== */
+  .mx-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--mx-font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    padding: 18px 44px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    line-height: 1.2;
+  }
+  .mx-btn--primary {
+    background: var(--mx-heading);
+    color: var(--mx-gold);
+  }
+  .mx-btn--primary:hover {
+    background: var(--mx-gold);
+    color: var(--mx-heading);
+  }
+  .mx-btn--gold {
+    background: var(--mx-gold);
+    color: #fff;
+  }
+  .mx-btn--gold:hover { background: var(--mx-heading); color: var(--mx-gold); }
+  .mx-btn--whatsapp {
+    background: var(--mx-whatsapp);
+    color: #fff;
+    letter-spacing: 0.12em;
+    padding: 15px 24px;
+  }
+  .mx-btn--whatsapp:hover { background: var(--mx-whatsapp-h); }
+
+  /* ============== UTILIDADES ============== */
+  .mx-divider {
+    width: 32px;
+    height: 2px;
+    background: var(--mx-gold);
+    border: 0;
+    margin: 0 0 20px;
+  }
+  .mx-rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid var(--mx-gold-soft);
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(26,24,20,0.04);
+  }
+  .mx-rating-pill__stars {
+    color: var(--mx-gold);
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+  .mx-rating-pill__score {
+    font-family: var(--mx-font-display);
+    font-size: 20px;
+    color: var(--mx-heading);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .mx-rating-pill__dot {
+    width: 3px; height: 3px;
+    background: var(--mx-gold-soft);
+    border-radius: 50%;
+  }
+  .mx-rating-pill__count {
+    font-size: 11px;
+    color: var(--mx-text-mute);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ============== HOME LANDING PRODUCT ============== */
+  .template-index .mx-landing-product {
+    background:
+      radial-gradient(circle at top left, rgba(184,154,82,0.12), transparent 32%),
+      linear-gradient(180deg, var(--mx-bg), var(--mx-bg-alt));
+    border-bottom: 1px solid var(--mx-border);
+  }
+
+  .template-index .mx-landing-product .m-main-product--wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    align-items: center;
+    background: rgba(255,255,255,0.66);
+    border: 1px solid var(--mx-border);
+    box-shadow: 0 24px 70px rgba(26,24,20,0.10);
+    padding: 28px;
+  }
+
+  .template-index .mx-landing-product .m-product-info--wrapper {
+    background: var(--mx-bg-card);
+    border: 1px solid var(--mx-gold-soft);
+    padding: 30px;
+  }
+
+  .template-index .mx-landing-product .m-product-info--wrapper::before {
+    content: 'Tratamiento principal';
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 7px 12px;
+    background: var(--mx-heading);
+    color: var(--mx-gold);
+    font-family: var(--mx-font-display);
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .template-index .mx-landing-product .m-product-title {
+    font-family: var(--mx-font-display);
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 0.96;
+    letter-spacing: 0.02em;
+    color: var(--mx-heading);
+    text-transform: uppercase;
+  }
+
+  .template-index .mx-landing-product .main-product__block {
+    margin-bottom: 18px;
+  }
+
+  .template-index .mx-landing-product .m-add-to-cart,
+  .template-index .mx-landing-product .shopify-payment-button__button {
+    min-height: 54px;
+    background: var(--mx-heading) !important;
+    color: var(--mx-gold) !important;
+    border-color: var(--mx-heading) !important;
+    font-family: var(--mx-font-body);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .template-index .mx-landing-product .m-add-to-cart:hover,
+  .template-index .mx-landing-product .shopify-payment-button__button:hover {
+    background: var(--mx-gold) !important;
+    color: var(--mx-heading) !important;
+    border-color: var(--mx-gold) !important;
+  }
+
+  .template-index .mx-landing-product .m-product-form,
+  .template-index .mx-landing-product .kaching-bundles {
+    font-family: var(--mx-font-body);
+  }
+
+  .template-index [class*="kaching"][class*="timer"],
+  .template-index [class*="kaching"] [class*="timer"] {
+    display: none !important;
+  }
+
+  /* ============== LANDING BALSAMO SAFE NORMALIZATION ============== */
+  .template-product.landing-balsamo {
+    background: var(--mx-bg);
+    color: var(--mx-text);
+    font-family: var(--mx-font-body);
+  }
+
+  .template-product.landing-balsamo .mx-prog2,
+  .template-product.landing-balsamo .faq-video-section,
+  .template-product.landing-balsamo .custom-comparison-wrapper,
+  .template-product.landing-balsamo .maximus-benefits-section,
+  .template-product.landing-balsamo .order-info-wrapper {
+    background: var(--mx-bg) !important;
+    font-family: var(--mx-font-body) !important;
+    padding-top: var(--mx-pad-y) !important;
+    padding-bottom: var(--mx-pad-y) !important;
+  }
+
+  .template-product.landing-balsamo .mx-tf,
+  .template-product.landing-balsamo .mx-faq {
+    font-family: var(--mx-font-body) !important;
+  }
+
+  .template-product.landing-balsamo .m-main-product {
+    background: var(--mx-bg) !important;
+    border-bottom: 1px solid var(--mx-border);
+  }
+
+  .template-product.landing-balsamo .m-main-product--wrapper {
+    align-items: flex-start !important;
+  }
+
+  .template-product.landing-balsamo .m-product-info--wrapper {
+    font-family: var(--mx-font-body);
+  }
+
+  .template-product.landing-balsamo .m-product-title,
+  .template-product.landing-balsamo .main-product__block-title,
+  .template-product.landing-balsamo .mx-prog2__title,
+  .template-product.landing-balsamo .mx-tf__title,
+  .template-product.landing-balsamo .faq-video-title,
+  .template-product.landing-balsamo .custom-heading,
+  .template-product.landing-balsamo .mx-faq__title,
+  .template-product.landing-balsamo .maximus-header h2,
+  .template-product.landing-balsamo .order-heading {
+    font-family: var(--mx-font-display) !important;
+    color: var(--mx-heading) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 0.96 !important;
+    text-transform: uppercase;
+  }
+
+  .template-product.landing-balsamo .m-product-title,
+  .template-product.landing-balsamo .main-product__block-title {
+    font-size: clamp(36px, 6vw, 64px) !important;
+  }
+
+  .template-product.landing-balsamo .faq-video-title,
+  .template-product.landing-balsamo .custom-heading,
+  .template-product.landing-balsamo .mx-faq__title,
+  .template-product.landing-balsamo .maximus-header h2,
+  .template-product.landing-balsamo .order-heading {
+    font-size: clamp(34px, 5vw, 56px) !important;
+    margin-bottom: 24px !important;
+  }
+
+  .template-product.landing-balsamo .m-product-description,
+  .template-product.landing-balsamo .main-product__block-short_description,
+  .template-product.landing-balsamo .custom-desc p,
+  .template-product.landing-balsamo .faq-video-questions li,
+  .template-product.landing-balsamo .mx-faq__subtitle,
+  .template-product.landing-balsamo .mx-faq__answer,
+  .template-product.landing-balsamo .maximus-detailed-item p,
+  .template-product.landing-balsamo .info-item,
+  .template-product.landing-balsamo .info-text-intro,
+  .template-product.landing-balsamo .info-footer-note {
+    font-family: var(--mx-font-body) !important;
+    color: var(--mx-text) !important;
+    letter-spacing: 0 !important;
+    line-height: 1.65 !important;
+  }
+
+  .template-product.landing-balsamo .m-add-to-cart,
+  .template-product.landing-balsamo .shopify-payment-button__button,
+  .template-product.landing-balsamo .custom-cta-btn,
+  .template-product.landing-balsamo .mx-faq__wa-btn,
+  .template-product.landing-balsamo .tab-btn {
+    border-radius: 2px !important;
+    font-family: var(--mx-font-body) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+  }
+
+  .template-product.landing-balsamo .m-add-to-cart,
+  .template-product.landing-balsamo .custom-cta-btn,
+  .template-product.landing-balsamo .tab-btn.active {
+    background: var(--mx-heading) !important;
+    border-color: var(--mx-heading) !important;
+    color: var(--mx-gold) !important;
+  }
+
+  .template-product.landing-balsamo .m-add-to-cart:hover,
+  .template-product.landing-balsamo .custom-cta-btn:hover,
+  .template-product.landing-balsamo .tab-btn:hover {
+    background: var(--mx-gold) !important;
+    border-color: var(--mx-gold) !important;
+    color: var(--mx-heading) !important;
+    transform: translateY(-2px);
+  }
+
+  .template-product.landing-balsamo .mx-atc-trustline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: -4px 0 18px;
+    font-family: var(--mx-font-body);
+    font-size: 12px;
+    color: var(--mx-text-mute);
+    text-align: center;
+  }
+
+  .template-product.landing-balsamo .mx-atc-trustline span {
+    background: var(--mx-bg);
+    border: 1px solid var(--mx-border);
+    padding: 8px 6px;
+  }
+
+  .template-product.landing-balsamo .faq-underline::after,
+  .template-product.landing-balsamo .order-heading span {
+    background: linear-gradient(90deg, transparent, rgba(183,148,70,0.5) 8%, #d4b766 50%, rgba(183,148,70,0.86) 92%, transparent) !important;
+    text-decoration-color: var(--mx-gold) !important;
+  }
+
+  .template-product.landing-balsamo .faq-underline,
+  .template-product.landing-balsamo .order-heading span,
+  .template-product.landing-balsamo .custom-heading span,
+  .template-product.landing-balsamo .maximus-header h2 span,
+  .template-product.landing-balsamo .faq-video-title span {
+    color: var(--mx-gold) !important;
+    font-family: var(--mx-font-display) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    line-height: 0.96;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.09em;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .template-product.landing-balsamo .faq-underline::after,
+  .template-product.landing-balsamo .order-heading span::after,
+  .template-product.landing-balsamo .custom-heading span::after,
+  .template-product.landing-balsamo .maximus-header h2 span::after,
+  .template-product.landing-balsamo .faq-video-title span::after {
+    content: '';
+    position: absolute;
+    left: 0.04em;
+    right: 0.04em;
+    bottom: 0.03em;
+    height: 0.038em;
+    min-height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(183,148,70,0.5) 8%, #d4b766 50%, rgba(183,148,70,0.86) 92%, transparent) !important;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .template-product.landing-balsamo .faq-video-questions li {
+    border-left-color: var(--mx-gold) !important;
+  }
+
+  .template-product.landing-balsamo .custom-table,
+  .template-product.landing-balsamo .maximus-benefit-item,
+  .template-product.landing-balsamo .maximus-detailed-item,
+  .template-product.landing-balsamo .tab-content-box,
+  .template-product.landing-balsamo .faq-player-wrap {
+    background: var(--mx-bg-card) !important;
+    border-color: var(--mx-border) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 16px 36px rgba(26,24,20,0.08) !important;
+  }
+
+  .template-product.landing-balsamo .bg-black,
+  .template-product.landing-balsamo .ct-col-brand {
+    background: var(--mx-heading) !important;
+    color: var(--mx-gold) !important;
+  }
+
+  .template-product.landing-balsamo .bg-white,
+  .template-product.landing-balsamo .ct-col-comp {
+    background: var(--mx-bg-card) !important;
+    color: var(--mx-heading) !important;
+  }
+
+  .template-product.landing-balsamo .custom-check-circle,
+  .template-product.landing-balsamo .maximus-benefit-icon,
+  .template-product.landing-balsamo .maximus-detailed-item .icon {
+    color: var(--mx-gold) !important;
+    border-color: var(--mx-gold-soft) !important;
+  }
+
+  .template-product.landing-balsamo .maximus-benefit-icon.special,
+  .template-product.landing-balsamo .maximus-detailed-item .icon.special {
+    background: var(--mx-heading) !important;
+    color: var(--mx-gold) !important;
+  }
+
+  .template-product.landing-balsamo .maximus-benefit-text,
+  .template-product.landing-balsamo .maximus-detailed-item h3,
+  .template-product.landing-balsamo .custom-benefit-item,
+  .template-product.landing-balsamo .ct-col-text,
+  .template-product.landing-balsamo .info-item strong {
+    color: var(--mx-heading) !important;
+    font-family: var(--mx-font-body) !important;
+  }
+
+  .template-product.landing-balsamo #product-promo-banner,
+  .template-product.landing-balsamo [data-foxkit-countdown-timer] {
+    display: none !important;
+  }
+
+  @media (min-width: 761px) {
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-product-media--item:nth-child(n+2) {
+      display: none !important;
+    }
+
+    .template-product.landing-balsamo .m-product-media--layout-1 media-gallery,
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-media-gallery__wrapper,
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-media-gallery__inner,
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-media-gallery__list,
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-product-media--item,
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-product-media {
+      height: auto !important;
+      min-height: 0 !important;
+    }
+
+    .template-product.landing-balsamo .m-product-media--layout-1 .m-media-gallery__list {
+      display: block !important;
+    }
+  }
+
+  /* ============== RESPONSIVE GLOBAL ============== */
+  @media (max-width: 760px) {
+    .mx-section { padding: var(--mx-pad-y-sm) var(--mx-pad-x-sm); }
+    .mx-section__head { margin-bottom: 44px; }
+    .mx-eyebrow { font-size: 10px; letter-spacing: 0.3em; }
+
+    .template-index .mx-landing-product .m-main-product--wrapper {
+      padding: 12px;
+    }
+
+    .template-index .mx-landing-product .m-product-info--wrapper {
+      padding: 22px;
+    }
+
+    .template-product.landing-balsamo .mx-prog2,
+    .template-product.landing-balsamo .faq-video-section,
+    .template-product.landing-balsamo .custom-comparison-wrapper,
+    .template-product.landing-balsamo .maximus-benefits-section,
+    .template-product.landing-balsamo .order-info-wrapper {
+      padding-top: var(--mx-pad-y-sm) !important;
+      padding-bottom: var(--mx-pad-y-sm) !important;
+    }
+
+    .template-product.landing-balsamo .mx-atc-trustline {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+  }
+
+  /* ============== CORRECCIÓN DE RECORTE DE IMÁGENES DEL SLIDER (LUMBEARD) ============== */
+  .template-index .mx-landing-product .m-media-gallery .m-image img,
+  .template-product.landing-balsamo .m-media-gallery .m-image img {
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .template-index .mx-landing-product .m-product-media,
+  .template-product.landing-balsamo .m-product-media {
+    background-color: transparent !important;
+  }
+
+  @media (max-width: 767px) {
+    .template-index .mx-landing-product .m-media-gallery__inner,
+    .template-product.landing-balsamo .m-media-gallery__inner {
+      height: auto !important;
+      aspect-ratio: 3 / 4 !important;
+    }
+  }
+  /* Premium barbershop polish: one strong display face, clean gold underline. */
+  .mx-title__accent,
+  .template-index .mx-title__accent,
+  .template-product.landing-balsamo .mx-title__accent,
+  .template-product.landing-balsamo .faq-underline,
+  .template-product.landing-balsamo .order-heading span,
+  .template-product.landing-balsamo .custom-heading span,
+  .template-product.landing-balsamo .maximus-header h2 span,
+  .template-product.landing-balsamo .faq-video-title span {
+    font-family: var(--mx-font-display) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    color: var(--mx-gold) !important;
+    letter-spacing: 0.02em !important;
+    text-shadow: none !important;
+  }
+
+  .mx-title__accent::after,
+  .template-product.landing-balsamo .faq-underline::after,
+  .template-product.landing-balsamo .order-heading span::after,
+  .template-product.landing-balsamo .custom-heading span::after,
+  .template-product.landing-balsamo .maximus-header h2 span::after,
+  .template-product.landing-balsamo .faq-video-title span::after {
+    height: 2px !important;
+    bottom: 0.035em !important;
+    background: linear-gradient(90deg, transparent, rgba(183,148,70,0.52), #d4b766, rgba(183,148,70,0.88), transparent) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .mx-section--alt,
+  .template-index .mx-section--alt,
+  .template-product.landing-balsamo .mx-section--alt {
+    background: var(--mx-bg-alt) !important;
+  }
+
+  /* Keeps anchor jumps and sticky header from cutting section titles. */
+  .mx-section,
+  .template-product.landing-balsamo .mx-prog2,
+  .template-product.landing-balsamo .faq-video-section,
+  .template-product.landing-balsamo .custom-comparison-wrapper,
+  .template-product.landing-balsamo .maximus-benefits-section,
+  .template-product.landing-balsamo .order-info-wrapper {
+    scroll-margin-top: 96px;
+  }
+
+  /* Results to benefits handoff: tighter, cleaner, closer to the old premium flow. */
+  .template-index .mx-section:has(.mx-prog__grid) {
+    padding-bottom: 62px;
+  }
+
+  .template-index .mx-section--white:has(.mx-bn__grid),
+  .template-product.landing-balsamo .mx-section--white:has(.mx-bn__grid) {
+    padding-top: 68px;
+    border-top: 1px solid rgba(183,148,70,0.12);
+  }
+
+  .template-index .mx-bn__grid,
+  .template-product.landing-balsamo .mx-bn__grid {
+    gap: 18px;
+    margin-bottom: 46px;
+  }
+
+  .template-index .mx-bn__item,
+  .template-product.landing-balsamo .mx-bn__item,
+  .template-index .mx-bn__card,
+  .template-product.landing-balsamo .mx-bn__card {
+    border-color: rgba(183,148,70,0.22);
+  }
+
+  @media (max-width: 760px) {
+    .mx-section,
+    .template-product.landing-balsamo .mx-prog2,
+    .template-product.landing-balsamo .faq-video-section,
+    .template-product.landing-balsamo .custom-comparison-wrapper,
+    .template-product.landing-balsamo .maximus-benefits-section,
+    .template-product.landing-balsamo .order-info-wrapper {
+      scroll-margin-top: 82px;
+    }
+
+    .template-index .mx-section:has(.mx-prog__grid) {
+      padding-bottom: 44px;
+    }
+
+    .template-index .mx-section--white:has(.mx-bn__grid),
+    .template-product.landing-balsamo .mx-section--white:has(.mx-bn__grid) {
+      padding-top: 50px;
+    }
+  }
+</style>
+
+<script>
+  /* MX HOME — Performance optimizer (runs idle, doesn't block) */
+  (function() {
+    var run = function() {
+      try {
+        /* 1) Add decoding="async" + lazy loading to all images that don't have them */
+        var imgs = document.querySelectorAll('img:not([decoding])');
+        for (var i = 0; i < imgs.length; i++) {
+          imgs[i].setAttribute('decoding', 'async');
+          if (!imgs[i].hasAttribute('loading')) {
+            /* Skip first 2 images (likely above fold) — let them load eager */
+            if (i > 1) imgs[i].setAttribute('loading', 'lazy');
+          }
+        }
+        /* 2) Lazy-load iframes (videos, embeds) */
+        var iframes = document.querySelectorAll('iframe:not([loading])');
+        for (var j = 0; j < iframes.length; j++) {
+          iframes[j].setAttribute('loading', 'lazy');
+        }
+        /* 3) Hint browser to deprioritize tracking scripts via fetchpriority */
+        var thirdPartyScripts = document.querySelectorAll('script[src*="analytics"], script[src*="gtag"], script[src*="facebook"]');
+        for (var k = 0; k < thirdPartyScripts.length; k++) {
+          if (!thirdPartyScripts[k].hasAttribute('fetchpriority')) {
+            thirdPartyScripts[k].setAttribute('fetchpriority', 'low');
+          }
+        }
+      } catch (e) { /* silent */ }
+    };
+    /* Defer until browser is idle, fall back to setTimeout */
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(run, { timeout: 2000 });
+    } else {
+      setTimeout(run, 800);
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "MX Home Styles",
+  "tag": "section",
+  "class": "mx-home-styles",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Sistema de diseño unificado para la página principal de Maximus Inc. Coloca esta sección como la primera del homepage y no la edites a menos que quieras cambiar la paleta o tipografía global."
+    }
+  ],
+  "presets": [
+    { "name": "MX Home Styles" }
+  ]
+}
+{% endschema %}
+
+

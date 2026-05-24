@@ -1,0 +1,259 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "custom_liquid_wRGRjj": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  /* --- Estilos para la sección --- */\n  .custom-features-wrapper-liquid {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr); /* 4 columnas en escritorio */\n    gap: 25px; /* Espacio entre los elementos */\n    padding: 20px 0;\n  }\n\n  .custom-feature-block-liquid {\n    text-align: center;\n    padding: 15px;\n  }\n  \n  /* --- CÓDIGO CORREGIDO PARA EL ICONO --- */\n  .custom-feature-block-liquid svg {\n    display: block;\n    width: 50px; /* Tamaño del icono (45px + 5px) */\n    height: 50px; /* Tamaño del icono (45px + 5px) */\n    margin: 0 auto 20px; /* Centra horizontalmente y da espacio abajo */\n  }\n\n  .custom-feature-block-liquid h3 {\n    font-size: 1.1em;\n    margin-bottom: 10px;\n    font-weight: bold;\n  }\n\n  /* --- Estilos para Celular --- */\n  @media screen and (max-width: 990px) {\n    .custom-features-wrapper-liquid {\n      grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */\n    }\n  }\n\n  @media screen and (max-width: 480px) {\n    .custom-features-wrapper-liquid {\n      grid-template-columns: 1fr; /* 1 columna en celular */\n    }\n  }\n</style>\n\n<div class=\"page-width\">\n  <h2 class=\"title\" style=\"text-align: center; margin-bottom: 30px;\">\n    Compra con Total Confianza\n  </h2>\n  \n  <div class=\"custom-features-wrapper-liquid\">\n    \n    <div class=\"custom-feature-block-liquid\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-shield\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>\n      <h3>Compra 100% Segura</h3>\n      <p>Tu tranquilidad es nuestra prioridad. Todas las transacciones están protegidas con encriptación.</p>\n    </div>\n\n    <div class=\"custom-feature-block-liquid\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-map-pin\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg>\n      <h3>Enviamos a todo México</h3>\n      <p>Desde nuestra base en el Estado de México, llegamos hasta la puerta de tu casa en cualquier rincón del país.</p>\n    </div>\n\n    <div class=\"custom-feature-block-liquid\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-credit-card\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"></rect><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"></line></svg>\n      <h3>Paga como Prefieras</h3>\n      <p>Aceptamos tarjetas, PayPal, Mercado Pago y pagos a plazos con Kueski y Aplazo.</p>\n    </div>\n\n    <div class=\"custom-feature-block-liquid\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-truck\"><rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect><polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\"></polygon><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle></svg>\n      <h3>Envío Gratis y Express</h3>\n      <p>En compras mayores a $1,000, el envío va por nuestra cuenta con paqueterías líderes.</p>\n    </div>\n\n  </div>\n</div>",
+        "custom_class": ""
+      }
+    },
+    "icon_box_tkRiyU": {
+      "type": "icon-box",
+      "blocks": {
+        "iconbox_9VYVJW": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image": "shopify://shop_images/shield.svg",
+            "image_by_url": "",
+            "title": "Compra 10000% Segura",
+            "description": "<p><br/>Todas las transacciones están encriptadas. (nadie se queda con tus datos)<br/><strong>Garantía de entrega</strong> y soporte por chat.<br/><strong>Te devolvemos tu dinero</strong> si pasa algo en el camino<br/><br/></p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_cCWYPH": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image": "shopify://shop_images/globe.svg",
+            "image_by_url": "",
+            "title": "Ubicados en Estado de México",
+            "description": "<p>Desde nuestra base en el Estado de México, llegamos hasta la puerta de tu casa en cualquier rincón del país.</p><p>¿Estás cerca? <strong>Visita nuestro punto de venta</strong> en la Zona Oriente (previa cita por chat).</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_x4h7kU": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image": "shopify://shop_images/credit-card.svg",
+            "image_by_url": "",
+            "title": "Diferentes métodos de pago y 3 MSI",
+            "description": "<p><br/>Aceptamos todos los métodos de pago:<br/>• Tarjetas de crédito y débito (hasta <strong>3 Meses Sin Intereses</strong>).<br/>• PayPal y Mercado Pago.<br/>• <strong>Paga a plazos</strong> con Kueski Pay y Aplazo.<br/>• Transferencia y pago en OXXO.<br/><br/></p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "iconbox_rLpbpN": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image": "shopify://shop_images/truck.svg",
+            "image_by_url": "",
+            "title": "Las mejores paqueterías",
+            "description": "<p>Recibe tus productos rápido y seguro. En compras mayores a $899, <strong>el envío va por nuestra cuenta</strong>.</p><p>Trabajamos con las mejores paqueterías como <strong>DHL, FedEx y Estafeta</strong> para garantizar una entrega puntual.</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "iconbox_9VYVJW",
+        "iconbox_cCWYPH",
+        "iconbox_x4h7kU",
+        "iconbox_rLpbpN"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Featured promotion",
+      "settings": {
+        "container": "container",
+        "color_scheme": "scheme-648b175e-fac2-4399-8630-e9ff5f2fc274",
+        "heading": "Compra con Total Confianza",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "item_per_row": 4,
+        "item_gap": 0,
+        "item_gap_mobile": 10,
+        "card_style": "vertical",
+        "image_max_width": "20",
+        "content_alignment": "center",
+        "hover_effect": "none",
+        "enable_slider": true,
+        "show_pagination": true,
+        "show_navigation": true,
+        "use_scroll_mobile": true,
+        "use_grid_column_mb": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "c85629c7-7aae-4666-b5f0-150990439c91": {
+          "type": "menu",
+          "settings": {
+            "menu": "politicas",
+            "title": "INFORMACION",
+            "width": "25%",
+            "order_first": false,
+            "open_default": false
+          }
+        },
+        "7527ffa4-1a31-4e5c-b642-96aa834daf84": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer2",
+            "title": "NOSOTROS",
+            "width": "25%",
+            "order_first": false,
+            "open_default": false
+          }
+        },
+        "newsletter_WjrkML": {
+          "type": "newsletter",
+          "settings": {
+            "title": "REGISTRATE A NUESTRO NEWSLETTER",
+            "description": "Regístrate para recibir actualizaciones exclusivas, novedades y descuentos exclusivos para nuestros clientes",
+            "email_placeholder": "Ingresa tu e-mail",
+            "show_icon_input": true,
+            "button_label": "",
+            "button_position": "inline",
+            "button_style": "m-button--blank",
+            "form_style": "minimal",
+            "show_social": false,
+            "show_agree_checkbox": false,
+            "width": "33%",
+            "order_first": true,
+            "open_default": true
+          }
+        },
+        "6a405be2-4446-4cbe-9ccb-94f9e2d7760c": {
+          "type": "our_store",
+          "settings": {
+            "title": "SIGUENOS EN NUESTRAS REDES",
+            "description": "",
+            "show_email": false,
+            "show_phone": false,
+            "show_socials_link": true,
+            "width": "25%",
+            "order_first": false,
+            "open_default": true
+          }
+        }
+      },
+      "block_order": [
+        "c85629c7-7aae-4666-b5f0-150990439c91",
+        "7527ffa4-1a31-4e5c-b642-96aa834daf84",
+        "newsletter_WjrkML",
+        "6a405be2-4446-4cbe-9ccb-94f9e2d7760c"
+      ],
+      "settings": {
+        "color_scheme": "scheme-648b175e-fac2-4399-8630-e9ff5f2fc274",
+        "design": "footer-1",
+        "container": "container-fluid",
+        "bordered": false,
+        "copyright": "© MAXIMUS INC 2025",
+        "show_country_selector": false,
+        "show_currency_selector": false,
+        "show_language_selector": false,
+        "show_social_links": false,
+        "enable_follow_on_shop": true,
+        "show_payment_icons": true,
+        "payment_icons_width": 300,
+        "footer_bottom_color_scheme": "scheme-648b175e-fac2-4399-8630-e9ff5f2fc274",
+        "footer_bottom_menu": "",
+        "show_menu_item_divider": false
+      }
+    },
+    "mobile-sticky-bar": {
+      "type": "mobile-sticky-bar",
+      "disabled": true,
+      "settings": {
+        "show_mobile_sticky": true,
+        "show_home_icon": true,
+        "show_collection_icon": true,
+        "show_cart_icon": true,
+        "show_search_icon": true,
+        "show_account_icon": false,
+        "show_wishlist_icon": false
+      }
+    },
+    "age-verifier-popup": {
+      "type": "age-verifier-popup",
+      "blocks": {
+        "block-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Confirm your age"
+          }
+        },
+        "block-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you 18 years old or older?</p>"
+          }
+        },
+        "block-3": {
+          "type": "buttons",
+          "settings": {
+            "decline_button": "No, I'm not",
+            "approve_button": "Yes, I am"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_mode": false,
+        "enable": false,
+        "bg_blur": true,
+        "decline_heading": "Come back when you're older",
+        "decline_content": "<p>Sorry, the content of this store can't be seen by a younger audience. Come back when you're older.</p>",
+        "return_button": "Oops, I entered incorrectly"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_wRGRjj",
+    "icon_box_tkRiyU",
+    "footer",
+    "mobile-sticky-bar",
+    "age-verifier-popup"
+  ]
+}

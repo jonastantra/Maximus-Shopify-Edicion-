@@ -1,0 +1,18 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {% for img in product.images %}
+    <picture class="w-full">
+      <source type="image/webp"
+              srcset="{{ img | img_url: '400x400', format: 'webp' }} 400w,
+                      {{ img | img_url: '800x800', format: 'webp' }} 800w">
+      <img
+        src="{{ img | img_url: '800x800', format: 'webp' }}"
+        srcset="{{ img | img_url: '400x400', format: 'webp' }} 400w,
+                {{ img | img_url: '800x800', format: 'webp' }} 800w"
+        sizes="(max-width: 640px) 100vw, 50vw"
+        alt="{{ img.alt | escape }}"
+        {% if forloop.index > 1 %} loading="lazy" decoding="async"{% endif %}
+        class="object-cover w-full h-auto rounded-lg shadow-sm"
+      >
+    </picture>
+  {% endfor %}
+</div>

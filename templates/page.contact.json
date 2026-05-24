@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "disabled": true,
+      "settings": {
+        "container": "container"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text-block-1": {
+          "type": "textblock",
+          "settings": {
+            "title": "Dirección",
+            "content": "<p>Plaza Guelatao Local 76<br/>Calz. ignacio zaragoza, Cdmx 406,<br/>México</p>"
+          }
+        },
+        "text-block-2": {
+          "type": "textblock",
+          "settings": {
+            "title": "Información",
+            "content": "<p><a href=\"https://api.whatsapp.com/send?phone=5215569380408\">Whatsapp :5569380408</a></p><p><a href=\"mailto:hola@maximus-inc.com.mx\">hola@maximus-inc.com.mx</a></p>"
+          }
+        },
+        "text-block-3": {
+          "type": "socialmedia",
+          "settings": {
+            "title": "Redes Sociales"
+          }
+        },
+        "text-block-4": {
+          "type": "textblock",
+          "settings": {
+            "title": "Horario de atención:",
+            "content": "<p>Martes a Domingo: 12:00AM - 5:00PM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-1",
+        "text-block-2",
+        "text-block-3",
+        "text-block-4"
+      ],
+      "settings": {
+        "container": "container",
+        "title": "Necesitas ayuda?",
+        "description": "<p>\"Tienes dudas? Habla con un experto en vivo y obtén ayuda al instante.\" ¿Quieres una versión aún más informal o más comercial?<br/><br/></p>",
+        "show_name": true,
+        "show_phone": true,
+        "show_signup_email": true,
+        "animations": "inherit"
+      }
+    },
+    "custom_content_JEVcRT": {
+      "type": "custom-content",
+      "blocks": {
+        "liquid_CycE8P": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7527.208373531576!2d-99.035915!3d19.386284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fd14babc2e7d%3A0xf02cbb69a1d6cf17!2sMinoxidil%20kirkland%20Cdmx!5e0!3m2!1ses-419!2smx!4v1747757680702!5m2!1ses-419!2smx\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>\n<br>\n\n<button class=\"m-button m-button--primary\"><a href=\"https://www.waze.com/es/live-map/directions/mx/cdmx/mexico-d.f./plaza-guelatao?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=place.ChIJKZJ7Rx_90YURBBnaG7-Ld6E\" class=\"button\">IR A WAZE</a></button>",
+            "width": "50%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        },
+        "html_TARGWJ": {
+          "type": "html",
+          "settings": {
+            "code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@john_barbas/video/7436508225463160119\" data-video-id=\"7436508225463160119\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@john_barbas\" href=\"https://www.tiktok.com/@john_barbas?refer=embed\">@john_barbas</a> <a title=\"johnbarbas\" target=\"_blank\" href=\"https://www.tiktok.com/tag/johnbarbas?refer=embed\">#johnbarbas</a><a title=\"crecimientobarba\" target=\"_blank\" href=\"https://www.tiktok.com/tag/crecimientobarba?refer=embed\">#crecimientobarba</a> <a title=\"minoxidil\" target=\"_blank\" href=\"https://www.tiktok.com/tag/minoxidil?refer=embed\">#minoxidil</a> <a target=\"_blank\" title=\"♬ sonido original  - johnbarbas\" href=\"https://www.tiktok.com/music/sonido-original-johnbarbas-7436508427251665719?refer=embed\">♬ sonido original  - johnbarbas</a> </section> </blockquote> <script async=\"\" src=\"https://www.tiktok.com/embed.js\"></script>",
+            "width": "50%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_CycE8P",
+        "html_TARGWJ"
+      ],
+      "name": "Custom content",
+      "settings": {
+        "heading": "Sucursal en Plaza Guelatao",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form",
+    "custom_content_JEVcRT"
+  ]
+}

@@ -1,0 +1,260 @@
+{% liquid
+  assign enable_rtl = settings.enable_rtl
+  assign language_support_rtl = settings.language_support_rtl
+  if enable_rtl and language_support_rtl != blank
+    assign shop_locale = localization.language.iso_code
+    assign language_support_rtl_list = language_support_rtl | split: ','
+    assign is_rtl = language_support_rtl_list | where: shop_locale
+    if is_rtl.size > 0
+      assign enable_rtl = true
+    else
+      assign enable_rtl = false
+    endif
+  endif
+
+  assign body_classes = 'template-' | append: template.name | append: ' ' | append: template.suffix | append: ' m-gradient m-color-' | append: settings.default_color_scheme
+  if settings.page_transition
+    assign body_classes = body_classes | append: ' m:overflow-hidden'
+  endif
+  if template.suffix == 'about-us'
+    assign body_classes = body_classes | append: ' sf__page-about'
+  endif
+%}
+<!doctype html>
+<html
+  class="no-js {% if settings.page_transition %} m:overflow-hidden{% endif %}"
+  lang="{{ request.locale.iso_code }}"
+  data-template="{{ template.name }}"
+  {% if enable_rtl %}
+    dir="rtl"
+  {% endif %}
+>
+  <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% render 'hyperspeed-imports' %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="theme-color" content="{{ settings.color_primary }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {%- if settings.use_favicon == true and settings.favicon != blank -%}
+      <link rel="shortcut icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    <link rel="preload" href="{{ 'vendor.aio.min.css' | asset_url }}" as="style">
+    <link rel="preload" as="style" media="screen" href="https://maximus-inc.com.mx/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+
+    <title>
+      {{- page_title -}}
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
+      {%- if template == 'password' -%}
+        {{- shop.name -}}
+      {%- else -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- endif -%}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {%- liquid
+      render 'social-meta-tags'
+      render 'font-face'
+      render 'critical-css'
+
+      echo 'main.aio.min.css' | asset_url | stylesheet_tag: preload: true
+
+      render 'style-tags'
+    -%}
+
+    <script defer src="{{ 'vendor.js' | asset_url }}"></script>
+    <script src="{% render 'hs-cdn-script' with filename: 'theme-global.js' %}" defer="defer"></script>
+    {%- if settings.animations != 'none' -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'animations.js' %}" defer="defer"></script>
+    {%- endif -%}
+    {%- if request.design_mode -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'theme-editor.js' %}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <style>
+      header .m-header__account .m-tooltip__content,
+      header .m-header__search .m-tooltip__content,
+      header .m-cart-icon-bubble .m-tooltip__content,
+      header .m-tooltip--bottom .m-tooltip__content {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      header .m-tooltip--bottom::before,
+      header .m-tooltip--bottom::after,
+      header .m-tooltip__content::before,
+      header .m-tooltip__content::after {
+        display: none !important;
+      }
+    </style>
+    {% render 'theme-data' %}
+    {% render 'custom-code-head' %}
+    
+    {%- if template.name == 'product' and product.featured_media != blank -%}
+      <link rel="preload" as="image" href="{{ product.featured_media.preview_image | image_url: width: 600 }}" imagesrcset="
+        {{ product.featured_media.preview_image | image_url: width: 400 }} 400w,
+        {{ product.featured_media.preview_image | image_url: width: 600 }} 600w,
+        {{ product.featured_media.preview_image | image_url: width: 800 }} 800w
+      " imagesizes="(max-width: 767px) calc(100vw - 4rem), 600px" fetchpriority="high">
+    {%- endif -%}
+
+    <!-- Sistema de Diseño Unificado: Fuentes y Estilos Globales para Maximus Inc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"></noscript>
+    <style>
+      :root {
+        --mx-font-display: 'Bebas Neue', 'Roboto Condensed', sans-serif !important;
+        --mx-font-body: 'DM Sans', 'Roboto', system-ui, sans-serif !important;
+        --mx-gold: #b79446 !important;
+        --mx-heading: #0c0b0a !important;
+        --mx-text: #494640 !important;
+        --mx-border: #d7d2c6 !important;
+
+        /* Sobrescribir variables originales del tema para consistencia global */
+        --font-stack-header: 'Bebas Neue', 'Roboto Condensed', sans-serif !important;
+        --font-stack-body: 'DM Sans', 'Roboto', system-ui, sans-serif !important;
+      }
+      
+      /* Consolidación de fuentes a nivel global en todo el sitio */
+      body, p, li, a, span, button, input, select, textarea, 
+      .m-menu__link, .m-menu-mobile__link, .m-product-description, 
+      .m-product-option--label, .m-add-to-cart--text, .mx-btn,
+      .mx-wyget__text, .mx-wyget__foot, .m-mega-article-card__title,
+      .installment, .m-product-tax, .m-pickup-availability__info,
+      .m-collapsible--button span, .rte {
+        font-family: var(--mx-font-body), sans-serif !important;
+      }
+      
+      h1, h2, h3, h4, h5, h6, 
+      .m-product-title, .product-title, .product-card__name, 
+      .mx-title, .m-mega-menu__column > a, .mx-wyget__title,
+      .m-menu__link--main, .mx-wyget__title, .m-collection-card__title,
+      .m-mega-banner__title, .m-mega-product-list__heading,
+      .m-logo, .m-logo strong, .m-header__logo, .m-header__logo strong, .m-header__logo a,
+      .m-logo__image-default strong, .m-logo__image-transparent strong,
+      .m-menu-mobile > li > .m-menu-mobile__link, .m-menu-mobile__back-button span {
+        font-family: var(--mx-font-display), sans-serif !important;
+        letter-spacing: 0.02em !important;
+        font-weight: 400 !important;
+      }
+
+      /* Acentos premium: mismo display font, dorado limpio, sin cursivas decorativas. */
+      .mx-title__accent,
+      .mx-title em,
+      h1 em, h2 em, h3 em {
+        font-family: var(--mx-font-display), sans-serif !important;
+        font-style: normal !important;
+        text-transform: uppercase !important;
+        font-weight: 400 !important;
+        letter-spacing: 0.02em !important;
+        color: var(--mx-gold) !important;
+      }
+      /* Badge unificado para el Bálsamo en el Menú */
+      .mx-menu-badge-balsamo {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: var(--mx-gold) !important; /* Oro Maximus */
+        color: #ffffff !important; /* Blanco premium */
+        font-size: 8px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.05em !important;
+        padding: 3px 8px !important;
+        border-radius: 4px !important;
+        margin-left: 6px !important;
+        vertical-align: middle !important;
+        line-height: 1 !important;
+        text-transform: uppercase !important;
+      }
+      .mx-menu-badge-balsamo--mobile {
+        font-size: 7.5px !important;
+        padding: 2px 6px !important;
+        margin-left: 8px !important;
+        display: inline-flex !important;
+      }
+    </style>
+  </head>
+
+  <body
+    id="m-theme"
+    class="{{ body_classes }}"
+    {% if template.name == 'product' %}
+      data-product-id="{{ product.id }}"
+    {% endif %}
+  >
+    {%- liquid
+      render 'page-transition'
+      render 'scroll-top-button'
+      sections 'header-group'
+    -%}
+
+    <main role="main" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {%- liquid
+      sections 'footer-group'
+      render 'script-tags'
+      render 'cookie-banner'
+      render 'whatsapp-float'
+      render 'custom-code-body'
+    -%}
+
+    {%- if settings.show_quickview_button -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'product-quick-view.js' %}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.show_wishlist_button -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'wishlist.js' %}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.show_compare_button -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'compare-product.js' %}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.enable_predictive_search -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'predictive-search.js' %}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if linklists['gift-wrapping'].links != blank
+      and linklists['gift-wrapping'].links.first.type == 'product_link'
+    -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'gift-wrapping.js' %}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.show_swatch_option -%}
+      <script src="{% render 'hs-cdn-script' with filename: 'product-card-swatch.js' %}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.enable_cart_drawer and template != 'cart' -%}
+      {% render 'cart-drawer' %}
+    {%- endif -%}
+    <link rel="preload" href="{{ 'splide.min.js' | asset_url }}" as="script"><script src="{{ 'splide.min.js' | asset_url }}"></script>
+
+  <script src="{{ 'tiny-img-link-preloader.js' | asset_url }}" defer></script>
+</body>
+</html>
+

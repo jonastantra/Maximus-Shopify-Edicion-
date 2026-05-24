@@ -1,0 +1,146 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "custom_liquid_aMcqWf": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<style id=\"mx-polish-typography\">\n.mx-section,.mx-section__inner,.mx-section__head,.mx-tb,.mx-tb__item,.mx-tf__case,.mx-tf__content,.mx-subtitle,.mx-hero__desc,.mx-wyget__foot,.kaching-bundles__bar-subtitle{color:#494640!important}.kaching-bundles__bar-full-price{color:#8d8d8d!important}.mx-section--alt,.mx-tf__photo,.kaching-bundles__bar-container{background:#efeee8!important}h1,h2,h3,.mx-title,.mx-heading,.mx-section__title,.mx-hero__title,.title,.heading{font-family:\"Bebas Neue\",\"Roboto Condensed\",Impact,\"Arial Narrow\",sans-serif!important;text-transform:uppercase!important;letter-spacing:.025em!important;line-height:.92!important;color:#0c0b0a!important}.mx-eyebrow,.mx-tag,.mx-rating-pill__stars,.mx-rating-pill__dot,.accent,.gold,h1 em,h2 em,h3 em{color:#b79446!important;font-family:var(--mx-font-display)!important;font-weight:400!important;font-style:normal!important;text-transform:uppercase!important;letter-spacing:.02em!important}a,u,.underline,[style*=\"underline\"]{text-decoration-color:#b79446!important;text-decoration-thickness:2px!important;text-underline-offset:.18em!important}\n</style>\n<!-- Barra promocional con contador regresivo -->\n<div id=\"promo-countdown-bar\" style=\"\n  background: linear-gradient(135deg, #ff4444, #cc0000);\n  color: white;\n  text-align: center;\n  padding: 15px 20px;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;\n  font-size: 18px;\n  font-weight: bold;\n  position: relative;\n  z-index: 999;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n  border: none;\n  margin: 0;\n\">\n  <div style=\"\n    max-width: 1200px;\n    margin: 0 auto;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 15px;\n  \">\n    <span style=\"white-space: nowrap;\">¡Termina Hoy 20% de Descuento + Envío GRATIS!</span>\n    <div style=\"display: flex; align-items: center; gap: 10px; white-space: nowrap;\">\n      <span id=\"dailyCountdown\" style=\"\n        font-weight: bold; \n        font-size: 22px; \n        background: rgba(255,255,255,0.15); \n        padding: 4px 12px; \n        border-radius: 6px;\n        letter-spacing: 1px;\n      \"></span>\n      <div style=\"display: flex; gap: 12px; font-size: 12px; opacity: 0.9; text-transform: uppercase;\">\n        <span>Hrs</span>\n        <span>Min</span>\n        <span>Seg</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\n  /* Responsive para móviles */\n  @media (max-width: 768px) {\n    #promo-countdown-bar {\n      font-size: 14px !important;\n      padding: 12px 15px !important;\n    }\n    \n    #promo-countdown-bar > div {\n      flex-direction: column;\n      gap: 8px !important;\n    }\n    \n    #promo-countdown-bar span[style*=\"white-space: nowrap\"] {\n      white-space: normal !important;\n      text-align: center;\n      line-height: 1.3;\n    }\n    \n    #dailyCountdown {\n      font-size: 18px !important;\n      padding: 3px 10px !important;\n    }\n  }\n  \n  /* Para tablets */\n  @media (min-width: 769px) and (max-width: 1024px) {\n    #promo-countdown-bar {\n      font-size: 16px !important;\n    }\n    \n    #dailyCountdown {\n      font-size: 20px !important;\n    }\n  }\n  \n  /* Para escritorio grande */\n  @media (min-width: 1200px) {\n    #promo-countdown-bar {\n      font-size: 20px !important;\n    }\n    \n    #dailyCountdown {\n      font-size: 24px !important;\n    }\n  }\n  \n  /* Asegurar que no haya conflictos con otros elementos */\n  #promo-countdown-bar * {\n    box-sizing: border-box;\n  }\n  \n  /* Efecto hover para mejor UX */\n  #promo-countdown-bar:hover {\n    box-shadow: 0 4px 12px rgba(0,0,0,0.3);\n  }\n</style>\n\n<script>\n(function() {\n  // Evitar conflictos con otros scripts\n  if (window.promoCountdownInitialized) return;\n  window.promoCountdownInitialized = true;\n  \n  function updateCountdown() {\n    const countdownElement = document.getElementById('dailyCountdown');\n    if (!countdownElement) return;\n    \n    const now = new Date();\n    const endOfDay = new Date();\n    endOfDay.setHours(23, 59, 59, 999);\n    const diff = endOfDay - now;\n    \n    if (diff <= 0) {\n      countdownElement.innerHTML = \"¡Terminó!\";\n      return;\n    }\n    \n    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');\n    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');\n    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');\n    \n    countdownElement.innerHTML = hours + ' : ' + minutes + ' : ' + seconds;\n  }\n  \n  // Inicializar inmediatamente\n  updateCountdown();\n  \n  // Actualizar cada segundo\n  setInterval(updateCountdown, 1000);\n})();\n</script>",
+        "custom_class": ""
+      }
+    },
+    "custom_liquid_GRLiyH": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mx-anno\">\n  <div class=\"mx-anno__inner\">\n    <div class=\"mx-anno__track\">\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">✓</span> Envío express gratis en compras desde $699 MXN</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">⚡</span> Pedidos antes de 12:00 hrs salen el mismo día</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">🛡</span> 30 días de garantía de satisfacción</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">★</span> 4.9 / 5 — 700+ reseñas verificadas</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">📦</span> Empaque 100% discreto</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">✓</span> Envío express gratis en compras desde $699 MXN</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">⚡</span> Pedidos antes de 12:00 hrs salen el mismo día</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">🛡</span> 30 días de garantía de satisfacción</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">★</span> 4.9 / 5 — 700+ reseñas verificadas</div>\n      <div class=\"mx-anno__slide\"><span class=\"mx-anno__icon\">📦</span> Empaque 100% discreto</div>\n    </div>\n  </div>\n</div>\n\n<style>\n.mx-anno {\n  background: #0c0b0a;\n  color: #f5f2ea;\n  padding: 12px 0;\n  font-family: var(--mx-font-body), system-ui, -apple-system, sans-serif;\n  border-bottom: 1px solid rgba(184, 154, 82, 0.25);\n  overflow: hidden;\n}\n.mx-anno__inner {\n  overflow: hidden;\n  width: 100%;\n  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n}\n.mx-anno__track {\n  display: flex;\n  gap: 60px;\n  width: max-content;\n  will-change: transform;\n  transform: translate3d(0, 0, 0);\n  animation: mx-anno-slide 30s linear infinite;\n}\n.mx-anno__slide {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  white-space: nowrap;\n  font-size: 11px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.15em;\n}\n.mx-anno__icon {\n  color: #b89a52;\n  font-size: 12px;\n}\n@keyframes mx-anno-slide {\n  from {\n    transform: translate3d(0, 0, 0);\n  } \n  to {\n    transform: translate3d(-50%, 0, 0);\n  }\n}\n@media (max-width: 768px) {\n  .mx-anno {\n    padding: 9px 0;\n  }\n  .mx-anno__slide {\n    font-size: 10px;\n    letter-spacing: 0.12em;\n  }\n  .mx-anno__track {\n    gap: 40px;\n    animation-duration: 24s;\n  }\n}\n@media (prefers-reduced-motion: reduce) {\n  .mx-anno__track {\n    animation: none;\n  }\n  .mx-anno__inner {\n    display: flex;\n    justify-content: center;\n  }\n  .mx-anno__track {\n    gap: 32px;\n  }\n}\n</style>",
+        "custom_class": ""
+      }
+    },
+    "1750694013e10143b3": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "dark",
+        "color_scheme_menu": "dark",
+        "header_design": "logo-left-menu-center",
+        "container": "container-fluid",
+        "sticky_header": "always",
+        "transparent_on_top": false,
+        "transparent_text_color": "#ffffff",
+        "logo_text": "STORE LOGO",
+        "logo": "shopify://shop_images/Maximus_Inc._3.svg",
+        "logo_mobile": "shopify://shop_images/Maximus_Inc._3.svg",
+        "logo_transparent": "shopify://shop_images/Maximus_Inc._3.svg",
+        "logo_svg": "",
+        "logo_mobile_svg": "",
+        "logo_transparent_svg": "",
+        "logo_max_width": 160,
+        "sticky_logo_max_width": 105,
+        "mobile_logo_max_width": 120,
+        "main_menu": "main-menu",
+        "secondary_menu": "main-menu",
+        "mobile_menu": "",
+        "uppercase_parent_level": true,
+        "show_menu_column_divider": true,
+        "search": "show_icon",
+        "show_account_icon": true,
+        "show_cart_icon": true,
+        "show_wishlist_icon": false,
+        "show_compare_icon": false,
+        "show_currency_switcher": true,
+        "show_country_selector": true,
+        "show_language_switcher": false,
+        "mb_show_currency_switcher": false,
+        "mb_show_country_selector": false,
+        "mb_show_language_switcher": false
+      }
+    },
+    "scrolling_promotion_qPnKzh": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_8DtqYP": {
+          "type": "announcement",
+          "settings": {
+            "custom_svg": "<img width=\"48\" height=\"48\" src=\"https://img.icons8.com/color/48/mexico.png\" alt=\"mexico\">",
+            "icon_size": "medium",
+            "text": "Tu compra llega super rápido y seguro todo México",
+            "text_size": 16,
+            "text_link": ""
+          }
+        },
+        "announcement_Kb47hV": {
+          "type": "announcement",
+          "settings": {
+            "custom_svg": "",
+            "icon_size": "medium",
+            "text": "📦 Envío gratis compra mínima de 1000$",
+            "text_size": 16,
+            "text_link": ""
+          }
+        },
+        "announcement_3d3K7V": {
+          "type": "announcement",
+          "settings": {
+            "custom_svg": "",
+            "icon_size": "medium",
+            "text": "✅ Resultados comprobados por la mejor prueba: ¡cientos de nuevas barbas! ⭐️⭐️⭐️⭐️⭐️",
+            "text_size": 16,
+            "text_link": "https://maximus-inc.com.mx/products/1-balsamo-de-minoxidil-al-20-4-oz-crecimiento-de-barba-y-bigote-extra-fuerte-cierra-huecos"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_8DtqYP",
+        "announcement_Kb47hV",
+        "announcement_3d3K7V"
+      ],
+      "disabled": true,
+      "name": "Scrolling promotion",
+      "settings": {
+        "container": "w-full",
+        "direction": "left",
+        "speed": 30,
+        "item_gap": 50,
+        "item_gap_mobile": 30,
+        "color_scheme": "",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_aMcqWf",
+    "custom_liquid_GRLiyH",
+    "1750694013e10143b3",
+    "header",
+    "scrolling_promotion_qPnKzh"
+  ]
+}
+

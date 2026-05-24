@@ -1,0 +1,812 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_TWPpN6": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"faq-video-section\">\n  <div class=\"faq-video-inner\">\n\n    <div class=\"faq-video-left\">\n      <h2 class=\"faq-video-title\">\n        Video con respuestas a las <span class=\"faq-underline\">preguntas más frecuentes.</span>\n      </h2>\n      <ul class=\"faq-video-questions\">\n        <li>¿En cuánto tiempo comenzaré a ver resultados?</li>\n        <li>¿Qué pasa si se me olvida aplicarlo?</li>\n        <li>¿Cuánto debo aplicar diariamente?</li>\n        <li>¿Puedo utilizar el bálsamo y estar bajo el sol?</li>\n        <li>¿Cómo lo aplico directamente?</li>\n      </ul>\n    </div>\n\n    <div class=\"faq-video-right\">\n      <div class=\"faq-player-wrap\" id=\"faqPlayerWrap\">\n\n        <div class=\"faq-thumbnail\" id=\"faqThumbnail\" onclick=\"faqPlayVideo()\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0568/3904/5282/files/vlcsnap-2026-04-16-08h42m01s601.jpg?v=1776351406\"\n            alt=\"Ver video de preguntas frecuentes\"\n            class=\"faq-thumb-img\"\n          />\n          <div class=\"faq-play-btn\">\n            <svg viewBox=\"0 0 80 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"white\" fill-opacity=\"0.92\"/>\n              <polygon points=\"32,22 62,40 32,58\" fill=\"#111111\"/>\n            </svg>\n          </div>\n        </div>\n\n        <video\n          class=\"faq-video-player\"\n          id=\"faqVideo\"\n          src=\"https://cdn.shopify.com/videos/c/o/v/7fe79b2b771942dfbe2a932b829e2222.mp4\"\n          controls\n          playsinline\n          preload=\"none\"\n          style=\"display:none;\"\n        ></video>\n\n      </div>\n    </div>\n\n  </div>\n</section>\n\n<style>\n  .faq-video-section {\n    padding: 60px 20px;\n    background: #ffffff;\n  }\n  .faq-video-inner {\n    max-width: 1100px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1.4fr 1fr;\n    gap: 50px;\n    align-items: center;\n  }\n  .faq-video-title {\n    font-size: clamp(24px, 3vw, 40px);\n    font-weight: 800;\n    line-height: 1.2;\n    color: #111111;\n    margin: 0 0 36px;\n  }\n  .faq-underline {\n    position: relative;\n    display: inline;\n  }\n  .faq-underline::after {\n    content: '';\n    position: absolute;\n    left: 0;\n    bottom: -5px;\n    width: 100%;\n    height: 4px;\n    background: #cc0000;\n    border-radius: 2px;\n  }\n  .faq-video-questions {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 22px;\n  }\n  .faq-video-questions li {\n    font-size: clamp(14px, 1.5vw, 18px);\n    color: #222222;\n    line-height: 1.4;\n    padding-left: 16px;\n    border-left: 3px solid #cc0000;\n  }\n  .faq-video-right {\n    display: flex;\n    justify-content: center;\n  }\n  .faq-player-wrap {\n    width: 100%;\n    max-width: 320px;\n    aspect-ratio: 9 / 16;\n    border-radius: 20px;\n    overflow: hidden;\n    background: #111111;\n    position: relative;\n  }\n  .faq-thumbnail {\n    position: relative;\n    cursor: pointer;\n    width: 100%;\n    height: 100%;\n  }\n  .faq-thumb-img {\n    width: 100%;\n    height: 100%;\n    display: block;\n    object-fit: cover;\n    transition: opacity 0.2s;\n  }\n  .faq-thumbnail:hover .faq-thumb-img {\n    opacity: 0.88;\n  }\n  .faq-play-btn {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 68px;\n    height: 68px;\n    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.35));\n    transition: transform 0.2s;\n  }\n  .faq-thumbnail:hover .faq-play-btn {\n    transform: translate(-50%, -50%) scale(1.1);\n  }\n  .faq-video-player {\n    width: 100%;\n    height: 100%;\n    display: block;\n    object-fit: cover;\n  }\n\n  @media (max-width: 768px) {\n    .faq-video-inner {\n      grid-template-columns: 1fr;\n      gap: 32px;\n    }\n    .faq-video-right {\n      order: -1;\n    }\n    .faq-player-wrap {\n      max-width: 260px;\n      margin: 0 auto;\n    }\n    .faq-video-section {\n      padding: 40px 16px;\n    }\n  }\n</style>\n\n<script>\n  function faqPlayVideo() {\n    var thumb = document.getElementById('faqThumbnail');\n    var video = document.getElementById('faqVideo');\n    thumb.style.display = 'none';\n    video.style.display = 'block';\n    video.play();\n  }\n</script>",
+        "custom_class": ""
+      }
+    },
+    "rich_text_qED4AA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3k7JBb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mas Preguntas Frecuentes",
+            "heading_size": "h2"
+          }
+        },
+        "text_Y4dE3Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A continuación, respondemos algunas preguntas frecuentes que suelen tener nuestros clientes antes de comprar el tema. Si tienes alguna otra pregunta,<br/>¡envíanos un correo a <strong>hola@maximus-inc.com.mx</strong>!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3k7JBb",
+        "text_Y4dE3Q"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "center",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "page-faqs",
+      "blocks": {
+        "content_7RnEhQ": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>Bálsamo de crecimiento con minoxidil</h3>"
+          }
+        },
+        "4e151238-4480-4122-b893-7f4a19886e4c": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo funciona el bálsamo?",
+            "content": "<p>Para el caso de aquellas personas que tienen zonas sin vellos se tiene la duda si tienen o no tienen folículo piloso por lo que recomendamos que lo usen al menos 8 semanas y si ven que salen vellos donde no había significa que hay folículo y de seguir usando el bálsamo lograrás grandes resultados, si en 8 semanas no nació nada de vello donde no había significa que no hay folículo y por tanto no tendría caso seguir con el tratamiento.</p>",
+            "open": false
+          }
+        },
+        "c5d4d04d-f6c1-4d1e-99f0-3c221393a3cf": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿En cuánto tiempo se ven resultados?",
+            "content": "<p>Los primeros resultados pueden observarse poco después del segundo mes de uso y los mejores entre 6 y 12 meses dependiendo de cada persona. La constancia y el uso diario es clave para el éxito.</p>",
+            "open": false
+          }
+        },
+        "0131747b-8b40-432f-b634-b1289ec41911": {
+          "type": "accordion",
+          "settings": {
+            "title": "4 recomendaciones que te damos para obtener mejores resultados:",
+            "content": "<p>Aplícalo 2 veces al día mañana y noche con el rostro limpio para que esté libre de grasa y suciedad y el bálsamo se absorba más fácilmente. Masajea la zona aplicando el bálsamo donde se desea estimular el crecimiento del vello facial. Ten paciencia y disciplina durante 90 días mínimo. No te rasures durante los primeros 30 días para que veas los resultados.</p>",
+            "open": false
+          }
+        },
+        "content_njeyig": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>FAQ: Acerca del Minoxidil</h3>"
+          }
+        },
+        "5d7206e9-5375-4da6-9a1f-24e1c46230b0": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ ES EL MINOXIDIL?",
+            "content": "<p><strong>El Minoxidil</strong> es un vasodilatador potente que se ha convertido en un aliado esencial para quienes buscan una barba más densa y rellenar espacios.</p><p>Este compuesto aumenta la circulación sanguínea en la zona aplicada, lo que permite que los folículos pilosos reciban una mayor cantidad de oxígeno y nutrientes. Esto no solo fortalece los vellos existentes, sino que también estimula el crecimiento de nuevos vellos.</p><p>Al aplicar Minoxidil, estás proporcionando a tu barba la nutrición que necesita para crecer más fuerte y saludable.</p><p>En <strong>Maximus Inc.</strong>, confiamos en la eficacia del Minoxidil y lo hemos incorporado en nuestros paquetes para crecimiento de barba para asegurar que obtengas los mejores resultados posibles.</p>",
+            "open": false
+          }
+        },
+        "4008f61e-055e-42ba-8969-cb3715c0aece": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ CONTIENE LA FÓRMULA CON MINOXIDIL?",
+            "content": "<p>Nuestra fórmula está cuidadosamente diseñada para ofrecerte los mejores resultados en el crecimiento y fortalecimiento de tu barba. Aquí te detallamos sus componentes:</p><ul><li><strong>Minoxidil al 20%</strong>: Con una pureza del 99%, este potente ingrediente activo es clave para estimular el crecimiento del vello facial.</li><li><strong>Aceite Esencial de Bergamota</strong>: Conocido por sus propiedades calmantes y su agradable aroma, ayuda a mantener tu piel fresca y revitalizada.</li><li><strong>Aceite Esencial de Menta</strong>: Proporciona una sensación refrescante y estimulante, además de contribuir a la salud del folículo piloso.</li><li><strong>Propilenglicol</strong>: Un vehículo eficaz que asegura que los ingredientes activos penetren profundamente en la piel.</li><li><strong>Alcohol</strong>: Actúa como antiséptico y preservante, garantizando la estabilidad de la fórmula.</li><li><strong>Agua Destilada</strong>: Utilizada para diluir y mezclar todos los componentes, asegurando una aplicación uniforme y efectiva.</li></ul><p>En <strong>Maximus Inc.</strong>, hemos formulado este producto con ingredientes de alta calidad para que puedas disfrutar de una barba más densa y saludable.</p>",
+            "open": false
+          }
+        },
+        "accordion_TbCyDe": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ TAN EFECTIVO ES EL PRODUCTO?",
+            "content": "<p>En <strong>Maximus Inc.</strong>, te ayudamos a transformar tu barba, sin importar tu punto de partida. Ya sea que estés completamente lampiño o que ya tengas algo de barba, nuestro Minoxidil al 20% ha demostrado ser altamente efectivo.</p><ul><li><strong>No importa tu edad</strong>: Aunque siempre recomendamos el uso en hombres mayores a 22 años y es más efectivo en hombres menores a 55 años.</li><li><strong>No importa tu genética</strong>: Hemos visto resultados positivos en hombres, a pesar de que sus antecedentes genéticos indicaran que no era posible desarrollar barba.</li><li><strong>No importa tu alimentación</strong>: Aunque una dieta saludable siempre es beneficiosa, nuestros productos están formulados para ser efectivos independientemente de tus hábitos alimenticios.</li></ul><p>Los resultados son graduales y van de poco a poco; si sigues el régimen con constancia y paciencia lograrás generar desde los primeros meses de aplicación ligeros vellos delgados que con el paso del tiempo irán convirtiéndose en vello fuerte y grueso. Todo es cuestión de constancia y paciencia en la aplicación.</p><p>En <strong>Maximus Inc.</strong>, estamos comprometidos en ayudarte a lograr una barba más densa, tupida y abundante.</p>",
+            "open": false
+          }
+        },
+        "accordion_REqzeJ": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿CUÁNTO TIEMPO DURA EL TRATAMIENTO?",
+            "content": "<p>Sabemos que todos queremos ver resultados rápido, pero una buena barba no se hace de la noche a la mañana; requiere de tiempo.</p><ul><li><strong>Cambios iniciales</strong>: Muchos de nuestros clientes notan cambios desde el primer mes de aplicación.</li><li><strong>Transformación total</strong>: Suele ocurrir entre los 6 y 12 meses de uso continuo.</li></ul><p>Para obtener los mejores resultados, recomendamos usar nuestros productos de forma constante durante al menos 3 meses.</p><p>Recuerda, en <strong>Maximus Inc.</strong>, estamos aquí para apoyarte en cada paso de tu camino hacia la barba que siempre has querido. Con paciencia y dedicación, lograrás una barba más densa, tupida y abundante.</p>",
+            "open": false
+          }
+        },
+        "accordion_AkWYT9": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿FUNCIONA PARA HOMBRES LAMPIÑOS?",
+            "content": "<p>Entendemos que tal vez piensas que ser lampiño significa no poder desarrollar una buena barba y que te vas a quedar así para siempre. Pero estamos aquí para cambiar esa percepción.</p><p>La respuesta es sencilla: Sí, incluso si no lo notas, tienes folículos en tu rostro que pueden desarrollarse en vello facial fuerte y saludable.</p><p>Nuestro Minoxidil está formulado para estimular esos folículos latentes, promoviendo el crecimiento de una barba más densa y abundante, sin importar tu punto de partida.</p><p>Con constancia y paciencia, podrás ver cómo tu barba se transforma poco a poco, alcanzando el grosor y forma que siempre has querido.</p>",
+            "open": false
+          }
+        },
+        "accordion_AR3E8a": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ EFECTOS SECUNDARIOS PUEDE OCASIONAR EL MINOXIDIL?",
+            "content": "<p><strong>Efectos Secundarios Posibles</strong></p><p>Al utilizar productos con Minoxidil, es posible que experimentes algunos efectos secundarios leves, especialmente durante los primeros días de uso. Estos pueden incluir:</p><ul><li>Resequedad.</li><li>Irritación.</li><li>Enrojecimiento.</li></ul><p>En muchas personas, estos efectos no se presentan, pero es importante estar informado. Suelen desaparecer estos efectos en las primeras semanas de uso.</p><p><strong>Recomendaciones</strong></p><p>Si se presenta algún tipo de molestia, lo que recomendamos siempre es ir usando el producto de manera gradual en lo que la piel se acostumbra. Es decir, primero usar cada 2 días, luego 1 vez por día, luego 2 veces por día.</p><p>El uso de estos productos no está recomendado para pieles muy sensibles o que presenten algún problema dermatológico.</p><p>Si tienes alguna duda sobre cómo podría reaccionar tu piel, te sugerimos que consultes a tu dermatólogo antes de realizar tu compra.</p><p>“El consumo de este producto es responsabilidad de quién lo usa y de quien lo recomienda”.</p><p>Recuerda, en <strong>Maximus Inc.</strong>, queremos que tengas la mejor experiencia posible con nuestros productos, siempre asegurando tu bienestar.</p>",
+            "open": false
+          }
+        },
+        "accordion_kX4gAK": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿EL MINOXIDIL SACA ACNÉ O IMPERFECCIONES?",
+            "content": "<p>El uso de <strong>Minoxidil</strong> puede, en algunos casos, causar resequedad o irritación en la piel, lo que puede llevar a la aparición de imperfecciones o acné. Sin embargo, estos efectos secundarios son poco comunes y suelen ser leves.</p><p>Para minimizar estos riesgos:</p><ul><li><strong>Hidratar la piel:</strong> Usa un buen hidratante para contrarrestar la resequedad.</li><li><strong>Aplicar correctamente:</strong> Evita aplicar demasiado producto y sigue las instrucciones de uso.</li></ul><p>Si experimentas alguna reacción adversa, es recomendable consultar a un dermatólogo.</p><p>En <strong>Maximus Inc.</strong>, estamos comprometidos con tu seguridad y bienestar.</p>",
+            "open": false
+          }
+        },
+        "accordion_neztj4": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿EL MINOXIDIL MANCHA LA PIEL?",
+            "content": "<p>El <strong>Minoxidil</strong> generalmente no causa manchas en la piel.</p><p>Sin embargo, algunas personas pueden experimentar ligeras irritaciones o enrojecimientos al inicio del tratamiento. Estos efectos suelen ser temporales y desaparecen a medida que la piel se adapta al producto.</p><p>Para minimizar cualquier riesgo:</p><ul><li><strong>Aplicar correctamente:</strong> Sigue las instrucciones y evita el uso excesivo.</li><li><strong>Hidratación:</strong> Mantén tu piel hidratada para prevenir resequedad e irritaciones.</li></ul><p>Si notas cualquier reacción adversa persistente, es recomendable consultar a un dermatólogo.</p><p>En <strong>Maximus Inc.</strong>, estamos comprometidos con tu seguridad y bienestar.</p>",
+            "open": false
+          }
+        },
+        "accordion_dckTqz": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ EFECTOS SECUNDARIOS PUEDE OCASIONAR EL MINOXIDIL?",
+            "content": "<p><strong>Efectos Secundarios Posibles</strong></p><p>Al utilizar productos con <strong>Minoxidil</strong>, es posible que experimentes algunos efectos secundarios leves, especialmente durante los primeros días de uso. Estos pueden incluir:</p><ul><li>Resequedad.</li><li>Irritación.</li><li>Enrojecimiento.</li></ul><p>En muchas personas, estos efectos no se presentan, pero es importante estar informado. Suelen desaparecer estos efectos en las primeras semanas de uso.</p><p><strong>Recomendaciones</strong></p><ul><li>Si se presenta algún tipo de molestia, lo que recomendamos siempre es ir usando el producto de manera gradual en lo que la piel se acostumbra. Es decir, primero usar cada 2 días, luego 1 vez por día, luego 2 veces por día.</li><li>El uso de estos productos no está recomendado para pieles muy sensibles o que presenten algún problema dermatológico.</li></ul><p>Si tienes alguna duda sobre cómo podría reaccionar tu piel, te sugerimos que consultes a tu dermatólogo antes de realizar tu compra.</p><p>“El consumo de este producto es responsabilidad de quién lo usa y de quien lo recomienda”.</p><p>Recuerda, en <strong>Maximus Inc.</strong>, queremos que tengas la mejor experiencia posible con nuestros productos, siempre asegurando tu bienestar.</p>",
+            "open": false
+          }
+        },
+        "content_ACKt3a": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>Uso de Minoxidil y su Aplicación</h3>"
+          }
+        },
+        "accordion_yEDTTT": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿EL MINOXIDIL MANCHA LA PIEL?",
+            "content": "<p>El Minoxidil generalmente no causa manchas en la piel.</p><p>Sin embargo, algunas personas pueden experimentar ligeras irritaciones o enrojecimientos al inicio del tratamiento. Estos efectos suelen ser temporales y desaparecen a medida que la piel se adapta al producto.</p><p>Para minimizar cualquier riesgo:</p><ul><li><strong>Aplicar correctamente:</strong> Sigue las instrucciones y evita el uso excesivo.</li><li><strong>Hidratación:</strong> Mantén tu piel hidratada para prevenir resequedad e irritaciones.</li><li>Si notas cualquier reacción adversa persistente, es recomendable consultar a un dermatólogo.</li></ul><p>En Maximus Inc., estamos comprometidos con tu seguridad y bienestar.</p>",
+            "open": false
+          }
+        },
+        "accordion_Ty6dMa": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿VENDEN NANOXIDIL, PROLOXIDIL, ETC.?",
+            "content": "<p>En Maximus Inc., nos enfocamos en ofrecer productos con Minoxidil, el único ingrediente activo científicamente comprobado para estimular el crecimiento de la barba y detener la alopecia.</p><p>Aunque existen otras formulaciones como Nanoxidil y Proloxidil en el mercado, el Minoxidil sigue siendo la opción más avalada y efectiva según numerosos estudios.</p>",
+            "open": false
+          }
+        },
+        "accordion_zCCJDP": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿QUÉ ES EL SHEDDING",
+            "content": "<p>El shedding es una fase normal del ciclo de crecimiento del cabello o barba en la cual se produce la caída de vello viejo para dar paso a nuevo crecimiento. Este proceso es una parte esencial del ciclo capilar y ocurre naturalmente.</p><p><strong>¿Por qué ocurre el Shedding?</strong> Durante el ciclo de crecimiento del cabello, el cabello pasa por varias fases:</p><ul><li><strong>Anágena (crecimiento)</strong></li><li><strong>Catágena (transición)</strong></li><li><strong>Telógena (reposo)</strong></li><li><strong>Exógena (caída)</strong></li></ul><p>El shedding ocurre en la fase exógena, donde los cabellos viejos que han completado su ciclo de vida se caen para permitir que nuevos cabellos crezcan en su lugar. Esto es completamente normal y necesario para mantener un cabello saludable.</p><p><strong>¿Qué esperar durante el Shedding?</strong></p><ul><li><strong>Normalidad:</strong> El shedding es una parte normal del proceso de renovación capilar.</li><li><strong>Temporalidad:</strong> Esta fase es temporal y suele durar unas semanas.</li><li><strong>Resultados positivos:</strong> Al finalizar esta fase, verás una mejora en la densidad y salud de tu cabello.</li></ul><p><strong>Conclusión:</strong> En Maximus Inc., queremos que estés informado y tranquilo durante tu tratamiento. El shedding puede ser una fase desafiante, pero es una parte normal y positiva del proceso hacia un cabello más fuerte y saludable. Si tienes alguna duda o inquietud, siempre estamos aquí para ayudarte.</p>",
+            "open": false
+          }
+        },
+        "accordion_xtGJzg": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿PUEDO EXPONERME AL SOL USANDO MINOXIDIL?",
+            "content": "<p>En Maximus Inc., recomendamos aplicar Minoxidil por la mañana y por la noche para maximizar su efectividad.</p><p>Aunque es seguro salir al sol temprano por la mañana (8-9 am) debido a la menor intensidad de los rayos solares, te sugerimos evitar aplicar Minoxidil al mediodía y exponerte directamente al sol.</p><p>Los rayos solares intensos pueden causar irritación y reducir la efectividad del producto.</p><p>Para un uso seguro y efectivo, sigue estas recomendaciones y disfruta de los beneficios del Minoxidil sin preocupaciones.</p>",
+            "open": false
+          }
+        },
+        "accordion_3TD9Gj": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿TENGO QUE RASURARME MIENTRAS USO MINOXIDIL?",
+            "content": "<p>Rasurarte mientras usas Minoxidil es opcional, pero para obtener los mejores resultados, recomendamos hacerlo cada 7 a 15 días (según dependa tus actividades o tu trabajo) o mantener tu barba ligeramente recortada.</p><p>Esto permite que el producto llegue a la piel en lugar de quedarse en el vello facial, asegurando una mayor efectividad del tratamiento.</p><p>Mantener tu barba bien recortada ayudará a que el Minoxidil penetre adecuadamente en los folículos pilosos, promoviendo un crecimiento más efectivo de la barba.</p>",
+            "open": false
+          }
+        },
+        "accordion_Vfk7DH": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿SE PUEDE USAR EN CEJAS O PESTAÑAS?",
+            "content": "<p>No recomendamos el uso de Minoxidil en las cejas o pestañas. Su uso en estas áreas está a consideración del cliente, pero es importante tener en cuenta los riesgos.</p><p>En particular, aplicar Minoxidil en las pestañas puede ser peligroso debido a la cercanía a los ojos y el riesgo de irritación o daño ocular.</p><p><strong>Para un uso seguro y efectivo, te sugerimos limitar la aplicación de Minoxidil a las áreas recomendadas, como el cuero cabelludo y la barba.</strong></p>",
+            "open": false
+          }
+        },
+        "accordion_yXrbmX": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿SE PUEDE USAR EN OTRAS ÁREAS DEL CUERPO, EJEMPLO PECHO?",
+            "content": "<p>Aunque algunos clientes han usado Minoxidil en el pecho sin experimentar reacciones adversas, Maximus Inc. no recomienda explícitamente su uso en otras áreas del cuerpo.</p><p>La aplicación de Minoxidil en zonas no indicadas es a consideración del cliente y no es una práctica avalada por nosotros.</p><p><strong>Para un uso seguro y efectivo, te sugerimos limitar la aplicación de Minoxidil a las áreas recomendadas, como el cuero cabelludo y la barba.</strong></p>",
+            "open": false
+          }
+        },
+        "accordion_RAAdtP": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿SE PUEDE USAR SI TENGO PROBLEMAS DE PRESIÓN O DIABETES?",
+            "content": "<p>Si tienes problemas de presión arterial o diabetes, es crucial que consultes previamente a tu médico antes de usar Minoxidil.</p><p>La seguridad y efectividad del tratamiento pueden variar según tu condición de salud y es importante recibir una recomendación profesional para evitar posibles complicaciones.</p><p>En Maximus Inc., siempre priorizamos tu bienestar y te recomendamos seguir las indicaciones médicas para un uso seguro y adecuado de nuestros productos.</p>",
+            "open": false
+          }
+        },
+        "accordion_Hh3ULf": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿TENGO CICATRICES, ME VA A FUNCIONAR AHÍ EL MINOXIDIL?",
+            "content": "<p>El Minoxidil puede ser menos efectivo en áreas con cicatrices, ya que el tejido cicatricial puede no contener folículos pilosos activos necesarios para el crecimiento del vello.</p><p>En zonas de cicatrices, los folículos pilosos pueden estar dañados o ausentes, lo que limita la efectividad del producto.</p><p><strong>Para obtener los mejores resultados, es importante aplicar Minoxidil en áreas con folículos pilosos activos. Si tienes dudas sobre su uso en cicatrices, te recomendamos consultar a un dermatólogo para una evaluación más precisa.</strong></p>",
+            "open": false
+          }
+        },
+        "content_phUnEF": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>FAQ's SOBRE DERMA ROLLER</h3>"
+          }
+        },
+        "accordion_RzC6nm": {
+          "type": "accordion",
+          "settings": {
+            "title": "Qué es el Derma Roller?",
+            "content": "<p>El Derma Roller es un rodillo con microagujas de titanio diseñado para promover la circulación sanguínea y estimular el crecimiento capilar en las áreas donde se aplica.</p>",
+            "open": false
+          }
+        },
+        "accordion_8WABxW": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Para qué sirve el Derma Roller?",
+            "content": "<p>El uso del Derma Roller crea pequeñas microlesiones en la piel. Esto incrementa la circulación sanguínea y permite que los folículos pilosos reciban más nutrientes y oxígeno, potenciando el crecimiento del vello facial.<br/><br/></p>",
+            "open": false
+          }
+        },
+        "accordion_t97iB8": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo se usa el Derma Roller?",
+            "content": "<p>Para obtener los mejores resultados, usa el Derma Roller dos veces por semana, pero nunca junto con el Minoxidil. (Ejemplo: usa el Minoxidil en la mañana y el Derma Roller por la noche).</p><p><strong>Sigue estos pasos:</strong></p><ul><li>Limpia bien tu rostro antes de usar el Derma Roller.</li><li>Pasa el Derma Roller 8 veces de arriba hacia abajo, 8 veces de izquierda a derecha y 8 veces en diagonal sobre las áreas de tu barba.</li><li>Asegúrate de aplicar una presión moderada para evitar irritaciones.</li></ul><p><strong>Nota:</strong> El Derma Roller es un complemento al uso del Minoxidil y debe ser utilizado como parte de una rutina completa de cuidado de la barba para maximizar los resultados.</p>",
+            "open": false
+          }
+        },
+        "accordion_zBgg7t": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cuál es el tamaño de aguja adecuado para usar un Derma Roller?",
+            "content": "<p>En Maximus Inc., recomendamos comenzar con un tamaño de aguja pequeño, como 0.5mm, que es el que manejamos especialmente si es tu primera vez. Este tamaño es el recomendado tanto para barba como para cabello.<br/></p>",
+            "open": false
+          }
+        },
+        "accordion_FA3epb": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Con qué frecuencia debo usar el Derma Roller?",
+            "content": "<p>Para un uso efectivo y seguro, lo ideal es utilizar el Derma Roller solo dos veces por semana con agujas de 0.5mm.</p><p><strong>Úsalo por la noche de preferencia.</strong></p><p><strong>Nunca usar junto al Minoxidil ni más de dos veces por semana.</strong></p><p>Recuerda que en Maximus Inc., la constancia es clave, pero también es importante no excederse para evitar irritaciones.</p>",
+            "open": false
+          }
+        },
+        "accordion_64GnPj": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo debo limpiar y almacenar el Derma Roller?",
+            "content": "<p>Es esencial mantener tu Derma Roller limpio para evitar infecciones. Lávalo con agua tibia y jabón suave inmediatamente después de su uso, luego desinféctalo sumergiéndolo en alcohol durante unos segundos.</p><p>Déjalo secar al aire y guárdalo en su estuche original o en un lugar limpio y seguro.</p><p>Así, garantizas un uso seguro y efectivo de tu Derma Roller Maximus Inc.</p>",
+            "open": false
+          }
+        },
+        "accordion_tH7UBw": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué debo evitar hacer después de usar el Derma Roller?",
+            "content": "<p>Después de usar el Derma Roller, evita rascar o frotar la piel tratada.</p><p>También es crucial evitar la exposición al sol (por lo cual siempre recomendamos su uso por la noche).</p><p>En Maximus Inc., recomendamos usar alguno de nuestros aceites después de usar el Derma Roller.</p>",
+            "open": false
+          }
+        },
+        "content_U8cBjB": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>FAQ'S SOBRE LA BIOTINA</h3>"
+          }
+        },
+        "accordion_J9cRrH": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué es la biotina?",
+            "content": "<p>La biotina es <strong>una vitamina esencial</strong> que a menudo no obtenemos en cantidades suficientes en nuestra dieta.</p><p>Esta vitamina juega un papel crucial en la salud del vello facial y el cabello, <strong>ayudando a que crezca más fuerte y saludable</strong>.</p>",
+            "open": false
+          }
+        },
+        "accordion_FkbmLf": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo se toma la biotina?",
+            "content": "<p>Te recomendamos tomar <strong>una pastilla de biotina al día</strong>, preferiblemente durante el desayuno.</p><p>Este hábito diario es sencillo y puede marcar una gran diferencia en los resultados que ves.</p>",
+            "open": false
+          }
+        },
+        "accordion_ttbTVd": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Para qué sirve la biotina?",
+            "content": "<p>La biotina es fundamental para el metabolismo de los ácidos grasos y aminoácidos, todos componentes esenciales para el crecimiento del vello.</p><p>Al asegurar que tu cuerpo recibe la biotina necesaria, <strong>ayudas a que el vello facial crezca más grueso y fuerte</strong>.</p><p>Además, la biotina contribuye a mejorar la <strong>salud de la piel y las uñas</strong>, lo que complementa perfectamente tu régimen de cuidado personal.</p><p>Incorporar biotina en tu rutina diaria <strong>maximiza los beneficios del Minoxidil</strong>, permitiendo que alcances los mejores resultados en el crecimiento de tu barba.</p>",
+            "open": false
+          }
+        },
+        "accordion_JQjf3M": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Es seguro consumir biotina a diario?",
+            "content": "<p>Sí, en Maximus Inc. consideramos que <strong>la biotina es segura para el consumo diario</strong>, ya que es una vitamina soluble en agua.</p><p>Esto significa que cualquier exceso de biotina se elimina naturalmente a través de la orina.</p><p>Sin embargo, es importante <strong>no exceder la dosis</strong> recomendada para evitar posibles efectos secundarios.</p><p>Si tienes condiciones médicas preexistentes es prudente consultar con un médico antes de comenzar cualquier suplemento.</p>",
+            "open": false
+          }
+        },
+        "accordion_H8qDiq": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Hay efectos secundarios asociados al uso de biotina?",
+            "content": "<p>La biotina es generalmente segura para la mayoría de las personas, pero como con cualquier suplemento, es posible experimentar efectos secundarios si se toma en dosis extremadamente altas.</p><p>Algunas personas pueden notar erupciones cutáneas o problemas digestivos.</p><p>En Maximus Inc. recomendamos <strong>seguir siempre la dosis indicada</strong> y consultar a un médico si experimentas cualquier síntoma inusual.</p>",
+            "open": false
+          }
+        },
+        "accordion_xKG4TM": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo puedo maximizar los beneficios de la biotina para el crecimiento de la barba?",
+            "content": "<p>Para obtener el máximo beneficio de la biotina, <strong>sugerimos integrarla en un estilo de vida saludable y una dieta equilibrada</strong>.</p><p>En Maximus Inc., creemos que la combinación de una buena nutrición interna y un cuidado externo adecuado es la mejor manera de lograr una barba fuerte y saludable.</p>",
+            "open": false
+          }
+        },
+        "accordion_33TjqD": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Puedo tomar alcohol junto a la biotina?",
+            "content": "<p>En Maximus Inc., promovemos un estilo de vida saludable, y si bien <strong>no hay evidencia que sugiera que el consumo moderado de alcohol interfiera directamente con la absorción de la biotina</strong>, es importante considerar que el alcohol en exceso puede afectar negativamente la salud en general.</p><p>Para maximizar los beneficios de la biotina y mantener una barba saludable, te recomendamos consumir alcohol con moderación y siempre cuidar tu bienestar general.</p>",
+            "open": false
+          }
+        },
+        "accordion_gnhAik": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Puedo tomar la biotina en la noche?",
+            "content": "<p>Sí, puedes tomar biotina en la noche sin problemas.</p><p>La biotina es una vitamina soluble en agua, por lo que el cuerpo eliminará cualquier exceso naturalmente.</p><p>En Maximus Inc., sugerimos tomar tu suplemento de biotina <strong>en el momento del día que mejor se adapte a tu rutina</strong>, ya sea por la mañana o por la noche.</p><p>Lo más importante es ser constante para obtener los mejores resultados en el crecimiento y cuidado de tu barba.</p>",
+            "open": false
+          }
+        },
+        "content_a7EMiH": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>PRODUCTOS CONTRA ALOPECIA</h3>"
+          }
+        },
+        "accordion_qznNJ6": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué resultados esperar?",
+            "content": "<p>En Maximus Inc., entendemos la importancia de tener expectativas claras y realistas cuando se trata del crecimiento del cabello. Aquí te explicamos lo que puedes esperar al ser constante con el uso de nuestros productos:</p><ul><li><strong>(0-3 meses):</strong> Al iniciar el tratamiento, uno de los primeros resultados que puedes esperar es la reducción de la caída del cabello. Esto es crucial, ya que detener la pérdida es el primer paso hacia la regeneración capilar.</li><li><strong>(3-6 meses):</strong> Comenzarás a notar que el cabello existente se fortalece y que los folículos empiezan a regenerarse. Es posible que observes la aparición de cabellos nuevos y finos en áreas donde antes no había crecimiento.</li><li><strong>(6-12 meses):</strong> Con el uso continuo y constante, estos cabellos nuevos se volverán más gruesos y fuertes. La densidad de tu cabello mejorará significativamente y podrás ver una regeneración notable en las áreas afectadas por la alopecia.</li></ul><p>La constancia en la aplicación de los productos es fundamental. Utiliza nuestros productos según las indicaciones para obtener los mejores resultados. Es importante ser paciente y mantener una rutina regular para permitir que los tratamientos funcionen de manera efectiva.</p><p>En Maximus Inc., estamos aquí para acompañarte en cada paso de tu viaje hacia un cabello más fuerte y saludable. Recuerda, los resultados no son de la noche a la mañana, pero con paciencia y constancia, lograrás detener la caída del cabello y fortalecer tu folículo piloso.</p>",
+            "open": false
+          }
+        },
+        "accordion_WJBVnn": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Sirve el producto para el cabello? ¿Funciona para la alopecia o calvicie?",
+            "content": "<p>En Maximus Inc., nuestros productos con Minoxidil están diseñados no solo para estimular el crecimiento de la barba, sino también para ayudar en el crecimiento del cabello, especialmente en casos de alopecia en grados menores.</p><h3>Alopecia vs. Calvicie</h3><ul><li><strong>Alopecia:</strong> Es la pérdida de cabello que puede ser temporal o progresiva. En sus etapas iniciales, el uso de Minoxidil puede ser muy efectivo para estimular el crecimiento del cabello y fortalecer los folículos pilosos.</li><li><strong>Calvicie:</strong> En casos de calvicie avanzada, donde ya no hay folículos pilosos, es importante entender que el Minoxidil no puede regenerar el cabello. Nuestro producto no es un milagro, pero puede ser muy efectivo si se usa a tiempo antes de perder el folículo.</li></ul><p><strong>¿Cómo funciona?</strong> El Minoxidil actúa aumentando la circulación sanguínea en el cuero cabelludo, lo que permite que los folículos reciban más oxígeno y nutrientes. Esto puede revitalizar los folículos que aún están activos, promoviendo un crecimiento más fuerte y saludable del cabello.</p><p><strong>¿Es adecuado para ti?</strong> Si estás experimentando una pérdida de cabello a temprana edad o alopecia en grados menores, nuestros productos pueden ayudarte a recuperar y fortalecer tu cabello.</p><p>Sin embargo, es crucial ser constante y paciente para ver los mejores resultados.</p><p>En Maximus Inc., estamos comprometidos a ofrecerte soluciones efectivas y realistas para el cuidado de tu cabello y barba, asegurando que siempre luzcas tu mejor versión.</p>",
+            "open": false
+          }
+        },
+        "accordion_BThywy": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Hasta qué edad se pueden usar los productos para el cabello?",
+            "content": "<ul><li><strong>Hasta los 40 años:</strong> Nuestros productos suelen mostrar resultados más rápidos y visibles, ya que los folículos pilosos suelen estar más receptivos al tratamiento.</li><li><strong>Más de 40 años:</strong> Aunque los resultados pueden ser más lentos, el Minoxidil sigue siendo una opción viable. La clave está en la constancia y en empezar el tratamiento lo antes posible.</li></ul><p><strong>Importancia de actuar a tiempo:</strong> Es fundamental comenzar el tratamiento en las primeras fases de la alopecia. Cuando los folículos pilosos están aún activos, el Minoxidil puede ayudar a revitalizarlos y promover el crecimiento del cabello.</p><p>Si esperas demasiado y los folículos se empiezan a atrofiar completamente, el tratamiento será menos efectivo.</p><h3>Conclusión:</h3><p>Actuar a tiempo y ser constante es la mejor estrategia para combatir la alopecia. Lo importante es empezar cuanto antes para evitar el daño de tu folículo piloso.</p><p>En Maximus Inc., estamos aquí para apoyarte en cada etapa de tu viaje hacia un cabello más saludable.</p>",
+            "open": false
+          }
+        },
+        "accordion_hpDwkW": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué es el Shedding?",
+            "content": "<p>El shedding es una fase normal del ciclo de crecimiento del cabello en la cual se produce la caída de cabello viejo para dar paso a nuevo crecimiento. Este proceso es una parte esencial del ciclo capilar y ocurre naturalmente.</p>",
+            "open": false
+          }
+        },
+        "accordion_CAkKmq": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Por qué ocurre el Shedding?",
+            "content": "<p>Durante el ciclo de crecimiento del cabello, el cabello pasa por varias fases: <strong>anágena (crecimiento)</strong>, <strong>catágena (transición)</strong>, <strong>telógena (reposo)</strong> y <strong>exógena (caída)</strong>.</p><p>El shedding ocurre en la fase exógena, donde los cabellos viejos que han completado su ciclo de vida se caen para permitir que nuevos cabellos crezcan en su lugar. Esto es completamente normal y necesario para mantener un cabello saludable.</p>",
+            "open": false
+          }
+        },
+        "accordion_nAKg6m": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué esperar durante el Shedding?",
+            "content": "<p>Cuando comienzas a usar productos con Minoxidil, es posible que experimentes una fase de shedding donde notarás un aumento en la caída del cabello. Aunque puede ser preocupante ver más cabellos de lo habitual en tu cepillo o almohada, esta es una señal de que el tratamiento está funcionando.</p><p>El Minoxidil acelera el ciclo de crecimiento del cabello, lo que puede llevar a una caída temporal de cabellos viejos para dar paso a nuevos y más fuertes.</p><h3>Es importante recordar:</h3><ul><li><strong>Normalidad:</strong> El shedding es una parte normal del proceso de renovación capilar.</li><li><strong>Temporalidad:</strong> Esta fase es temporal y suele durar unas semanas.</li><li><strong>Resultados positivos:</strong> Al finalizar esta fase, verás una mejora en la densidad y salud de tu cabello.</li></ul><p>En Maximus Inc., queremos que estés informado y tranquilo durante tu tratamiento. El shedding puede ser una fase desafiante, pero es una parte normal y positiva del proceso hacia un cabello más fuerte y saludable. Si tienes alguna duda o inquietud, siempre estamos aquí para ayudarte.</p>",
+            "open": false
+          }
+        },
+        "accordion_PDHhJg": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué más puedo hacer para prevenir la caída del cabello?",
+            "content": "<p>Además de usar productos específicos como el Minoxidil, mantener una dieta equilibrada, evitar peinados que tiren del cabello, evitar el uso excesivo de gorras y proteger el cuero cabelludo del sol son medidas importantes para prevenir la caída del cabello.</p><p>Evitar el estrés y dejar de fumar también pueden ser beneficiosos, ya que estos factores pueden contribuir a la pérdida de cabello.</p>",
+            "open": false
+          }
+        },
+        "accordion_hzA4VH": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué precauciones debo tener en el uso de productos en el cuero cabelludo?",
+            "content": "<p>El uso de productos con Minoxidil puede ser muy efectivo para combatir la caída del cabello y promover su crecimiento, pero es importante seguir ciertas precauciones para asegurar un uso seguro y maximizar los resultados.</p><h3>Efectos Secundarios Comunes:</h3><ul><li><strong>Resequedad:</strong> Puede causar sequedad en el cuero cabelludo. Usar un shampoo suave y acondicionador puede ayudar a mitigar este efecto.</li><li><strong>Irritación y Enrojecimiento:</strong> Estos síntomas suelen ser leves y temporales. Si persisten, es importante reducir la frecuencia de uso y consultar a un médico.</li></ul><p>En muchos casos no se presentan estos síntomas o suelen durar solamente las primeras semanas de uso.</p><p><em>“El consumo de este producto es responsabilidad de quién lo usa y de quien lo recomienda.”</em></p><h3>Recomendaciones Generales:</h3><ul><li><strong>Uso Externo:</strong> El Minoxidil es solo para uso externo. Asegúrate de aplicarlo únicamente en el cuero cabelludo y evita el contacto con otras partes del cuerpo.</li><li><strong>Evitar Piel Dañada:</strong> No apliques Minoxidil en áreas del cuero cabelludo que estén irritadas, inflamadas o dañadas. Esto puede causar irritación adicional y reducir la efectividad del tratamiento.</li><li><strong>Expectativas Realistas:</strong> El Minoxidil es más efectivo en las primeras fases de la alopecia y puede ayudar a detener la caída del cabello y promover su crecimiento. Sin embargo, no funciona para la calvicie avanzada donde los folículos pilosos ya no están activos.</li><li><strong>Consultas Médicas:</strong> Si experimentas alguna reacción adversa, como enrojecimiento severo, picazón o irritación persistente, consulta a un dermatólogo. Además, si tienes alguna condición preexistente del cuero cabelludo, es recomendable hablar con un profesional antes de comenzar el tratamiento.</li></ul>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "content_7RnEhQ",
+        "4e151238-4480-4122-b893-7f4a19886e4c",
+        "c5d4d04d-f6c1-4d1e-99f0-3c221393a3cf",
+        "0131747b-8b40-432f-b634-b1289ec41911",
+        "content_njeyig",
+        "5d7206e9-5375-4da6-9a1f-24e1c46230b0",
+        "4008f61e-055e-42ba-8969-cb3715c0aece",
+        "accordion_TbCyDe",
+        "accordion_REqzeJ",
+        "accordion_AkWYT9",
+        "accordion_AR3E8a",
+        "accordion_kX4gAK",
+        "accordion_neztj4",
+        "accordion_dckTqz",
+        "content_ACKt3a",
+        "accordion_yEDTTT",
+        "accordion_Ty6dMa",
+        "accordion_zCCJDP",
+        "accordion_xtGJzg",
+        "accordion_3TD9Gj",
+        "accordion_Vfk7DH",
+        "accordion_yXrbmX",
+        "accordion_RAAdtP",
+        "accordion_Hh3ULf",
+        "content_phUnEF",
+        "accordion_RzC6nm",
+        "accordion_8WABxW",
+        "accordion_t97iB8",
+        "accordion_zBgg7t",
+        "accordion_FA3epb",
+        "accordion_64GnPj",
+        "accordion_tH7UBw",
+        "content_U8cBjB",
+        "accordion_J9cRrH",
+        "accordion_FkbmLf",
+        "accordion_ttbTVd",
+        "accordion_JQjf3M",
+        "accordion_H8qDiq",
+        "accordion_xKG4TM",
+        "accordion_33TjqD",
+        "accordion_gnhAik",
+        "content_a7EMiH",
+        "accordion_qznNJ6",
+        "accordion_WJBVnn",
+        "accordion_BThywy",
+        "accordion_hpDwkW",
+        "accordion_CAkKmq",
+        "accordion_nAKg6m",
+        "accordion_PDHhJg",
+        "accordion_hzA4VH"
+      ],
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "menu": "politicas",
+        "custom_class": ""
+      }
+    },
+    "page_faqs_GxJkFd": {
+      "type": "page-faqs",
+      "blocks": {
+        "content_ABPNEB": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>Bálsamo de crecimiento con minoxidil</h3>"
+          }
+        },
+        "accordion_CK8zfh": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo funciona el bálsamo?",
+            "content": "<p>Para el caso de aquellas personas que tienen zonas sin vellos se tiene la duda si tienen o no tienen folículo piloso por lo que recomendamos que lo usen al menos 8 semanas y si ven que salen vellos donde no había significa que hay folículo y de seguir usando el bálsamo lograrás grandes resultados, si en 8 semanas no nació nada de vello donde no había significa que no hay folículo y por tanto no tendría caso seguir con el tratamiento.</p>",
+            "open": false
+          }
+        },
+        "accordion_7WHjAp": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿En cuánto tiempo se ven resultados?",
+            "content": "<p>Los primeros resultados pueden observarse poco después del segundo mes de uso y los mejores entre 6 y 12 meses dependiendo de cada persona. La constancia y el uso diario es clave para el éxito.</p>",
+            "open": false
+          }
+        },
+        "accordion_X8BRgF": {
+          "type": "accordion",
+          "settings": {
+            "title": "4 recomendaciones que te damos para obtener mejores resultados:",
+            "content": "<p>Aplícalo 2 veces al día mañana y noche con el rostro limpio para que esté libre de grasa y suciedad y el bálsamo se absorba más fácilmente. Masajea la zona aplicando el bálsamo donde se desea estimular el crecimiento del vello facial. Ten paciencia y disciplina durante 90 días mínimo. No te rasures durante los primeros 30 días para que veas los resultados.</p>",
+            "open": false
+          }
+        },
+        "content_MYQAFV": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>FAQ's SOBRE DERMA ROLLER</h3>"
+          }
+        },
+        "accordion_FAhd8V": {
+          "type": "accordion",
+          "settings": {
+            "title": "Qué es el Derma Roller?",
+            "content": "<p>El Derma Roller es un rodillo con microagujas de titanio diseñado para promover la circulación sanguínea y estimular el crecimiento capilar en las áreas donde se aplica.</p>",
+            "open": false
+          }
+        },
+        "accordion_wcddmY": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Para qué sirve el Derma Roller?",
+            "content": "<p>El uso del Derma Roller crea pequeñas microlesiones en la piel. Esto incrementa la circulación sanguínea y permite que los folículos pilosos reciban más nutrientes y oxígeno, potenciando el crecimiento del vello facial.<br/><br/></p>",
+            "open": false
+          }
+        },
+        "accordion_94rBTE": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo se usa el Derma Roller?",
+            "content": "<p>Para obtener los mejores resultados, usa el Derma Roller dos veces por semana, pero nunca junto con el Minoxidil. (Ejemplo: usa el Minoxidil en la mañana y el Derma Roller por la noche).</p><p><strong>Sigue estos pasos:</strong></p><ul><li>Limpia bien tu rostro antes de usar el Derma Roller.</li><li>Pasa el Derma Roller 8 veces de arriba hacia abajo, 8 veces de izquierda a derecha y 8 veces en diagonal sobre las áreas de tu barba.</li><li>Asegúrate de aplicar una presión moderada para evitar irritaciones.</li></ul><p><strong>Nota:</strong> El Derma Roller es un complemento al uso del Minoxidil y debe ser utilizado como parte de una rutina completa de cuidado de la barba para maximizar los resultados.</p>",
+            "open": false
+          }
+        },
+        "accordion_Uetq8j": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cuál es el tamaño de aguja adecuado para usar un Derma Roller?",
+            "content": "<p>En Maximus Inc., recomendamos comenzar con un tamaño de aguja pequeño, como 0.5mm, que es el que manejamos especialmente si es tu primera vez. Este tamaño es el recomendado tanto para barba como para cabello.<br/></p>",
+            "open": false
+          }
+        },
+        "accordion_APcEJj": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Con qué frecuencia debo usar el Derma Roller?",
+            "content": "<p>Para un uso efectivo y seguro, lo ideal es utilizar el Derma Roller solo dos veces por semana con agujas de 0.5mm.</p><p><strong>Úsalo por la noche de preferencia.</strong></p><p><strong>Nunca usar junto al Minoxidil ni más de dos veces por semana.</strong></p><p>Recuerda que en Maximus Inc., la constancia es clave, pero también es importante no excederse para evitar irritaciones.</p>",
+            "open": false
+          }
+        },
+        "accordion_8mCkgM": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Cómo debo limpiar y almacenar el Derma Roller?",
+            "content": "<p>Es esencial mantener tu Derma Roller limpio para evitar infecciones. Lávalo con agua tibia y jabón suave inmediatamente después de su uso, luego desinféctalo sumergiéndolo en alcohol durante unos segundos.</p><p>Déjalo secar al aire y guárdalo en su estuche original o en un lugar limpio y seguro.</p><p>Así, garantizas un uso seguro y efectivo de tu Derma Roller Maximus Inc.</p>",
+            "open": false
+          }
+        },
+        "accordion_KNztaK": {
+          "type": "accordion",
+          "settings": {
+            "title": "¿Qué debo evitar hacer después de usar el Derma Roller?",
+            "content": "<p>Después de usar el Derma Roller, evita rascar o frotar la piel tratada.</p><p>También es crucial evitar la exposición al sol (por lo cual siempre recomendamos su uso por la noche).</p><p>En Maximus Inc., recomendamos usar alguno de nuestros aceites después de usar el Derma Roller.</p>",
+            "open": false
+          }
+        },
+        "content_tCTLnC": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>FAQ'S SOBRE LA BIOTINA</h3>"
+          }
+        },
+        "accordion_Uxxppe": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_yJ7XH3": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_aJmTaV": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_HqLgXP": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_hHpC9t": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_rcE98k": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_jeB78y": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_aThiDf": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "content_JTk7VW": {
+          "type": "content",
+          "settings": {
+            "content": "<h3>PRODUCTOS CONTRA ALOPECIA</h3>"
+          }
+        },
+        "accordion_QbCXxz": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_nVEXhT": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_N9EdaF": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_XAkyjk": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_tTXPhK": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_FQYARx": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        },
+        "accordion_McPg3z": {
+          "type": "accordion",
+          "settings": {
+            "title": "Question Name",
+            "content": "<p>Answer Content</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "content_ABPNEB",
+        "accordion_CK8zfh",
+        "accordion_7WHjAp",
+        "accordion_X8BRgF",
+        "content_MYQAFV",
+        "accordion_FAhd8V",
+        "accordion_wcddmY",
+        "accordion_94rBTE",
+        "accordion_Uetq8j",
+        "accordion_APcEJj",
+        "accordion_8mCkgM",
+        "accordion_KNztaK",
+        "content_tCTLnC",
+        "accordion_Uxxppe",
+        "accordion_yJ7XH3",
+        "accordion_aJmTaV",
+        "accordion_HqLgXP",
+        "accordion_hHpC9t",
+        "accordion_rcE98k",
+        "accordion_jeB78y",
+        "accordion_aThiDf",
+        "content_JTk7VW",
+        "accordion_QbCXxz",
+        "accordion_nVEXhT",
+        "accordion_N9EdaF",
+        "accordion_XAkyjk",
+        "accordion_tTXPhK",
+        "accordion_FQYARx",
+        "accordion_McPg3z"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "menu": "politicas",
+        "custom_class": ""
+      }
+    },
+    "rich_text_9f7CaM": {
+      "type": "rich-text",
+      "blocks": {
+        "text_TrdcWW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¿No encuentras respuestas satisfactorias?</p>"
+          }
+        },
+        "button_HAQdMD": {
+          "type": "button",
+          "settings": {
+            "button_label": "CONTACTA CON SOPORTE",
+            "button_link": "https://api.whatsapp.com/send?phone=5215569380408&text=Hola%20quiero%20mas%20informacion%20del%20producto%20",
+            "button_style": "m-button--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_TrdcWW",
+        "button_HAQdMD"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "right",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_TWPpN6",
+    "rich_text_qED4AA",
+    "main",
+    "page_faqs_GxJkFd",
+    "rich_text_9f7CaM"
+  ]
+}

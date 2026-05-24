@@ -1,0 +1,195 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "favicon": "shopify://shop_images/d788e5bf-5640-44aa-9a00-2f30238d95b3.png",
+    "show_scroll_top_button": false,
+    "enable_rtl": false,
+    "language_support_rtl": "",
+    "type_base_font": "roboto_condensed_n4",
+    "use_custom_font_body": false,
+    "custom_body_font": "",
+    "custom_body_weight": "400",
+    "type_base_line_height": 28,
+    "type_header_font": "roboto_condensed_n7",
+    "use_custom_font_heading": false,
+    "custom_heading_font": "",
+    "custom_heading_weight": "300",
+    "h2_font_size": 40,
+    "btn_uppercase_text": true,
+    "btn_base_size": 15,
+    "btn_letter_spacing": 1,
+    "btn_border_radius": 2,
+    "btn_line_height": 18,
+    "btn_weight": "700",
+    "inputs_border_radius": 2,
+    "blocks_corner_radius": "square",
+    "default_color_scheme": "default",
+    "bg_cart_wishlist_count": "#000000",
+    "img_overlay_opacity": 20,
+    "spacing_sections": 0,
+    "spacing_sections_mobile": 0,
+    "page_transition": false,
+    "animations": "none",
+    "animation_duration": 0.2,
+    "pcard_layout": "4",
+    "pcard_alignment": "center",
+    "pcard_image_ratio": "1/1",
+    "show_quickview_button": false,
+    "show_wishlist_button": false,
+    "show_compare_button": false,
+    "show_vendor": false,
+    "uppercase_prd_name": true,
+    "variant_option_design3": "color",
+    "product_colors": "",
+    "filter_color1": "",
+    "sale_badge_color_scheme": "dark",
+    "preorder_badge_color_scheme": "dark",
+    "share_facebook": true,
+    "contact_phone_number": "+5215569380408",
+    "contact_email": "hola@maximus-inc.comx",
+    "find_store": "contacto",
+    "social_twitter_link": "",
+    "social_facebook_link": "https://www.facebook.com/maximusbe/videos",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://www.instagram.com/maximusincpro/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCswpfVy9vLa-F6zSM7spxBw",
+    "social_tiktok_link": "https://www.tiktok.com/@maximusincmx",
+    "social_tiktok_label": "https://www.tiktok.com/@maximusincmx",
+    "social_whatsapp_link": "https://api.whatsapp.com/send?phone=5215569380408",
+    "enable_cart_drawer": true,
+    "cart_drawer_show_accelerated_button": true,
+    "cart_notes_enable": false,
+    "cart_estimate_shipping": false,
+    "default_country_estimate_shipping": "Mexico",
+    "cart_drawer_trust_badge": "shopify://shop_images/Untitled_design.jpg",
+    "search_by_tag": true,
+    "search_by_body": true,
+    "popular_search_queries": "",
+    "wishlist_page": "wishlist",
+    "product_compare_page": "product-compare",
+    "show_agree_on_product": false,
+    "cookie_design_mode": false,
+    "gm_api": "AIzaSyCdx2l7je-rV6B1zsfvVsUbnVOiGx1EjVY",
+    "custom_css": "body.template-index {\n  background: #fffdf8;\n}\nbody .m-quantity {\n  border-radius: 0;\n}\n.m-footer--block .m-footer--block-title {\n  font-weight: 700;\n}\n.m-slide__subtitle,\n.m-article-card__content .m-article-card__title {\n  font-weight: 700;\n  text-transform: uppercase;\n}\n.m-section__subheading,\n.m-richtext__subtitle:not(.m-slide__subtitle),\n.m-article-card__content .m-article-card__tags {\n  color: #927D5F;\n  font-weight: 700;\n}\n.m-newsletter-form--bordered .m-newsletter-form__input {\n  border-radius: 0;\n}\n.m-newsletter-form--bordered .m-newsletter-form__button {\n  border-radius: 0 !important;\n  background: #000;\n  color: #fff;\n  text-transform: uppercase;\n  font-weight: 700;\n  transition: all 0.3s;\n}\n.m-newsletter-form--bordered .m-newsletter-form__button:hover {\n  background-color: rgb(var(--color-button-hover));\n  border-color: rgb(var(--color-button-hover));\n}\n.m-product-card__title .m-product-card__name {\n  font-weight: 700;\n}\n.m-menu .m-menu__item .m-menu__link--main {\n  font-weight: 700;\n}",
+    "show_variant_swatch_image": true,
+    "use_theme_currencies": true,
+    "theme_currencies": "USD | EUR | GBP | VND",
+    "content_for_index": [],
+    "blocks": {
+      "5784066569132941777": {
+        "type": "shopify://apps/s-store-locator/blocks/embed-app/e7003487-cc51-4321-9488-2c47c07a5b17",
+        "disabled": true,
+        "settings": {}
+      },
+      "17899005752291538835": {
+        "type": "shopify://apps/loadify-preloader/blocks/loadify-block/a901f8d1-8a96-4e38-a7d8-fdf18b278bfc",
+        "disabled": true,
+        "settings": {}
+      },
+      "442549160356511856": {
+        "type": "shopify://apps/ck-whatsapp/blocks/app-embed-block/ce4c5d89-06d5-4502-b18d-35d424a3f693",
+        "disabled": true,
+        "settings": {}
+      },
+      "15557474716127144420": {
+        "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+        "disabled": false,
+        "settings": {}
+      },
+      "11532412952436166569": {
+        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "disabled": false,
+        "settings": {}
+      },
+      "9356323809658795675": {
+        "type": "shopify://apps/reelup-shoppable-videos-reels/blocks/reelup/a8ec9e4d-d192-44f7-9c23-595f9ee7dd5b",
+        "disabled": true,
+        "settings": {
+          "debugging_global_script": "",
+          "enable_reelPops": true
+        }
+      },
+      "18348123794867637515": {
+        "type": "shopify://apps/wiz/blocks/app-embed/240b6bc0-e686-4c07-8fde-eb7ee1949893",
+        "disabled": true,
+        "settings": {}
+      }
+    },
+    "color_schemes": {
+      "default": {
+        "settings": {
+          "background": "#f9f9f9",
+          "background_secondary": "#f1f1f1",
+          "background_gradient": "",
+          "text": "#111111",
+          "subtext": "#666666",
+          "heading_text": "#111111",
+          "button": "#000000",
+          "button_label": "#ffffff",
+          "outline_button_label": "#000000",
+          "button_hover": "#222222",
+          "button_text_hover": "#ffffff",
+          "price_sale": "#da3f3f",
+          "price_regular": "#000000",
+          "form_field": "#fffdf8",
+          "form_field_label": "#000000",
+          "tooltip": "#222222",
+          "tooltip_label": "#ffffff",
+          "border": "#000000"
+        }
+      },
+      "dark": {
+        "settings": {
+          "background": "#000000",
+          "background_secondary": "#f5f5f5",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "subtext": "#c9c9c9",
+          "heading_text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#222222",
+          "outline_button_label": "#ffffff",
+          "button_hover": "#ffffff",
+          "button_text_hover": "#222222",
+          "price_sale": "#e84e4e",
+          "price_regular": "#ffffff",
+          "form_field": "#ffffff",
+          "form_field_label": "#222222",
+          "tooltip": "#ffffff",
+          "tooltip_label": "#222222",
+          "border": "#4b4b4b"
+        }
+      },
+      "scheme-648b175e-fac2-4399-8630-e9ff5f2fc274": {
+        "settings": {
+          "background": "#f1efe8",
+          "background_secondary": "#f5f5f5",
+          "background_gradient": "",
+          "text": "#000000",
+          "subtext": "#666666",
+          "heading_text": "#000000",
+          "button": "#006d77",
+          "button_label": "#ffffff",
+          "outline_button_label": "#006d77",
+          "button_hover": "#f9f9f9",
+          "button_text_hover": "#ffffff",
+          "price_sale": "#e84e4e",
+          "price_regular": "#000000",
+          "form_field": "#fffdf8",
+          "form_field_label": "#000000",
+          "tooltip": "#222222",
+          "tooltip_label": "#ffffff",
+          "border": "#000000"
+        }
+      }
+    }
+  }
+}

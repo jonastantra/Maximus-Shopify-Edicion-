@@ -1,0 +1,417 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_content_kYYJc4": {
+      "type": "custom-content",
+      "blocks": {
+        "text_TadkAC": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "subheading": "",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "align_text": "center",
+            "text_size": "medium",
+            "text_color": "inherit",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "text_TadkAC"
+      ],
+      "name": "Custom content",
+      "settings": {
+        "heading": "Custom content",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    },
+    "main": {
+      "type": "page-find-a-store",
+      "blocks": {
+        "57d4ca67-c7db-44f1-a160-83845cffd52a": {
+          "type": "content",
+          "settings": {
+            "heading": "Est Alvarez Barberia",
+            "content": "<div class=\"m-store-info\">\n  <div class=\"m-store-info__item\">\n      <h4>Dirección</h4>\n      <p class=\"m:text-color-subtext\">\n        Estrella #32, V. Carranza<br>\n        Cuahutémoc, Nativitas, Tlaxcala\n      </p>\n      <a href=\"https://www.google.com/maps/search/?api=1&amp;query=Estrella+%2332,+Cuahut%C3%A9moc,+Nativitas,+Tlaxcala\" target=\"_blank\">\n        Cómo llegar\n      </a>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Horarios</h4>\n      <p class=\"m:text-color-subtext\">\n        Lunes a sábado<br>\n        11:00 AM a 7:00 PM\n      </p>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Contáctanos</h4>\n      <p class=\"m:text-color-subtext\">\n        Escríbenos por WhatsApp y te atenderemos<br>\n        lo antes posible.\n      </p>\n      <p>\n        <a href=\"https://wa.me/5215614622363\" target=\"_blank\">+52 1 56 1462 2363</a>\n      </p>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Redes Sociales</h4>\n      <ul>\n        <li>\n          <a href=\"https://www.facebook.com/profile.php?id=61557400600163\" target=\"_blank\">\n            Facebook\n          </a>\n        </li>\n      </ul>\n  </div>\n</div>",
+            "width": "50%"
+          }
+        },
+        "4304e893-780a-4b0f-a53e-19a1a6dc3dae": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_1.jpg",
+            "width": "50%",
+            "enable_preload_image": false
+          }
+        },
+        "512eaa33-ad0b-4215-adfa-297491a726db": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_2.jpg",
+            "width": "50%",
+            "enable_preload_image": false
+          }
+        },
+        "content_mz8pmf": {
+          "type": "content",
+          "settings": {
+            "heading": "La Barberia",
+            "content": "<div class=\"m-store-info\">\n  <div class=\"m-store-info__item\">\n      <h4>Dirección</h4>\n      <p class=\"m:text-color-subtext\">\n        Oriente 8 #177, Col. Reforma<br>\n        Nezahualcóyotl, Estado de México\n      </p>\n      <a href=\"https://www.google.com/maps/search/?api=1&amp;query=Oriente+8+%23177,+Col+Reforma,+Nezahualc%C3%B3yotl,+Estado+de+M%C3%A9xico\" target=\"_blank\">\n        Cómo llegar\n      </a>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Horarios</h4>\n      <p class=\"m:text-color-subtext\">\n        Lunes a sábado<br>\n        11:00 AM a 7:00 PM\n      </p>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Contáctanos</h4>\n      <p class=\"m:text-color-subtext\">\n        Escríbenos por WhatsApp y te atenderemos<br>\n        lo antes posible.\n      </p>\n      <p>\n        <a href=\"https://wa.me/5215572945816\" target=\"_blank\">+52 1 55 7294 5816</a>\n      </p>\n  </div>\n\n  <div class=\"m-store-info__item\">\n      <h4 class=\"h5\">Redes Sociales</h4>\n      <ul>\n        <li>\n          <a href=\"https://www.facebook.com/Labarberianz\" target=\"_blank\">\n            Facebook\n          </a>\n        </li>\n      </ul>\n  </div>\n</div>",
+            "width": "50%"
+          }
+        }
+      },
+      "block_order": [
+        "57d4ca67-c7db-44f1-a160-83845cffd52a",
+        "4304e893-780a-4b0f-a53e-19a1a6dc3dae",
+        "512eaa33-ad0b-4215-adfa-297491a726db",
+        "content_mz8pmf"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "gap": 200,
+        "gap_mobile": 50
+      }
+    },
+    "maps_Ewff9C": {
+      "type": "maps",
+      "blocks": {
+        "heading_DbYCij": {
+          "type": "heading",
+          "settings": {
+            "heading": "Est Alvarez Barberia"
+          }
+        },
+        "text_gQPTPx": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>📍 Dirección:</strong><br/>V. Carranza #32<br/>Col. Concordia<br/>C.P. 90710, Natívitas, Tlaxcala, México</p><p><strong>🕒Horarios:</strong><br/>Lunes a Viernes: 11:00 AM – 7:00 PM<br/>Sábado: 11:00 AM – 5:00 PM<br/>Domingo: Cerrado</p>"
+          }
+        },
+        "button_UWtEaB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Ubicación",
+            "button_link": "https://maps.app.goo.gl/Cvbkhy63PEdWEKkw9",
+            "button_style": "m-button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DbYCij",
+        "text_gQPTPx",
+        "button_UWtEaB"
+      ],
+      "name": "Google map",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "map_height": "medium",
+        "textx": "19.241953",
+        "texty": "-98.345297",
+        "zoom": "16",
+        "text2": "Estrella #32 V Carranza Cuahutémoc Nativitas Tlaxcala 90710",
+        "content_position": "top-right",
+        "text_alignment": "left",
+        "use_content_in_container": false,
+        "animations": "inherit",
+        "custom_class": ""
+      }
+    },
+    "maps_QkCkeR": {
+      "type": "maps",
+      "blocks": {
+        "heading_yicnRq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Est Alvarez Barberia"
+          }
+        },
+        "text_GdJABi": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>📍 Dirección:</strong><br/>Estrella #32, Tlaxcala, Mexico, 90170</p><p><strong>🕒Horarios:</strong><br/>Lunes a Viernes: 11:00 AM – 7:00 PM<br/>Sábado: 11:00 AM – 5:00 PM<br/>Domingo: Cerrado</p>"
+          }
+        },
+        "button_e6QFWa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Ubicación",
+            "button_link": "https://maps.app.goo.gl/Cvbkhy63PEdWEKkw9",
+            "button_style": "m-button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yicnRq",
+        "text_GdJABi",
+        "button_e6QFWa"
+      ],
+      "name": "Google map",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "map_height": "medium",
+        "textx": "19.241953",
+        "texty": "-98.345297",
+        "zoom": "16",
+        "text2": "Estrella #32, Tlaxcala, Mexico, 90170",
+        "content_position": "top-right",
+        "text_alignment": "left",
+        "use_content_in_container": false,
+        "animations": "inherit",
+        "custom_class": ""
+      }
+    },
+    "multiple_image_with_text_7dzpKP": {
+      "type": "multiple-image-with-text",
+      "blocks": {
+        "image_with_text_pRFwkf": {
+          "type": "image_with_text",
+          "settings": {
+            "color_scheme": "",
+            "title": "Talk about your brand",
+            "sub_title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "medium",
+            "text_alignment": "left",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "image_with_text_NJ9ctg": {
+          "type": "image_with_text",
+          "settings": {
+            "color_scheme": "",
+            "title": "Talk about your brand",
+            "sub_title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "medium",
+            "text_alignment": "left",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        },
+        "image_with_text_AQcKAE": {
+          "type": "image_with_text",
+          "settings": {
+            "color_scheme": "",
+            "title": "Talk about your brand",
+            "sub_title": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "medium",
+            "text_alignment": "left",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "m-button--link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_pRFwkf",
+        "image_with_text_NJ9ctg",
+        "image_with_text_AQcKAE"
+      ],
+      "disabled": true,
+      "name": "Multiple image with text",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "color_scheme": "",
+        "column_gap": 100,
+        "column_gap_mobile": 16,
+        "show_pagination": false,
+        "show_navigation": true,
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "17539054729a82c40e": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "1753905501590afd7d": {
+      "type": "apps",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "custom_liquid_N4p3Ut": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=13aLubSWS0oA28jjcQ9bSE6_oEf9L7aI&ehbc=2E312F\" width=\"640\" height=\"480\"></iframe>",
+        "custom_class": ""
+      }
+    },
+    "1753905554ca83a8f2": {
+      "type": "apps",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "175394178348ce0d59": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "17539417944e2b5cf1": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "1753941804a324a875": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "1754000425563652af": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "1754000443a6af17b7": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "custom_content_kYYJc4",
+    "main",
+    "maps_Ewff9C",
+    "maps_QkCkeR",
+    "multiple_image_with_text_7dzpKP",
+    "17539054729a82c40e",
+    "1753905501590afd7d",
+    "custom_liquid_N4p3Ut",
+    "1753905554ca83a8f2",
+    "175394178348ce0d59",
+    "17539417944e2b5cf1",
+    "1753941804a324a875",
+    "1754000425563652af",
+    "1754000443a6af17b7"
+  ]
+}

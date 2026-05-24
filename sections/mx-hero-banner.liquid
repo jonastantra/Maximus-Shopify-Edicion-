@@ -1,0 +1,625 @@
+{% liquid
+  assign slide_1_desktop = 'mx-hero-new-1-desktop.webp' | asset_url
+  assign slide_2_desktop = 'mx-hero-new-2-desktop.webp' | asset_url
+  assign slide_3_desktop = 'mx-hero-new-3-desktop.webp' | asset_url
+  assign slide_4_desktop = 'mx-hero-new-4-desktop.webp' | asset_url
+  assign slide_5_desktop = 'mx-hero-new-5-desktop.webp' | asset_url
+  assign slide_1_mobile = 'mx-hero-new-1-mobile.webp' | asset_url
+  assign slide_2_mobile = 'mx-hero-new-2-mobile.webp' | asset_url
+  assign slide_3_mobile = 'mx-hero-new-3-mobile.webp' | asset_url
+  assign slide_4_mobile = 'mx-hero-new-4-mobile.webp' | asset_url
+  assign slide_5_mobile = 'mx-hero-new-5-mobile.webp' | asset_url
+%}
+
+<style>
+  .mx-hero {
+    position: relative;
+    min-height: clamp(700px, 50vw, 920px);
+    overflow: hidden;
+    background: #0c0b0a;
+    color: #f7f2e8;
+    font-family: var(--mx-font-body), sans-serif;
+    border-bottom: 1px solid rgba(184,154,82,0.28);
+  }
+
+  .mx-hero__slides,
+  .mx-hero__slide,
+  .mx-hero__slide picture,
+  .mx-hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mx-hero__slide {
+    opacity: 0;
+    animation: mxHeroFade 25s infinite;
+  }
+
+  .mx-hero__slide:nth-child(1) { animation-delay: 0s; }
+  .mx-hero__slide:nth-child(2) { animation-delay: 5s; }
+  .mx-hero__slide:nth-child(3) { animation-delay: 10s; }
+  .mx-hero__slide:nth-child(4) { animation-delay: 15s; }
+  .mx-hero__slide:nth-child(5) { animation-delay: 20s; }
+
+  .mx-hero__img {
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transform: scale(1.005);
+  }
+
+  .mx-hero__slide:nth-child(1) .mx-hero__img { object-position: 58% center; }
+  .mx-hero__slide:nth-child(2) .mx-hero__img { object-position: 62% center; }
+  .mx-hero__slide:nth-child(3) .mx-hero__img { object-position: 62% center; }
+  .mx-hero__slide:nth-child(4) .mx-hero__img { object-position: 63% center; }
+  .mx-hero__slide:nth-child(5) .mx-hero__img { object-position: 60% center; }
+
+  @media (min-width: 768px) {
+    .mx-hero__img {
+      object-fit: contain;
+      object-position: right center !important;
+    }
+  }
+
+  .mx-hero__content {
+    position: relative;
+  }
+
+  .mx-hero__content::before {
+    content: "";
+    position: absolute;
+    inset: -34px -46px -38px -42px;
+    z-index: -1;
+    background: radial-gradient(ellipse at 20% 50%, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.54) 38%, rgba(0,0,0,0.0) 72%);
+    pointer-events: none;
+  }
+
+  .mx-hero__shade {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      linear-gradient(90deg, rgba(8,7,6,0.58) 0%, rgba(8,7,6,0.34) 30%, rgba(8,7,6,0.06) 58%, rgba(8,7,6,0.0) 100%),
+      linear-gradient(180deg, rgba(8,7,6,0.04) 0%, rgba(8,7,6,0.0) 48%, rgba(8,7,6,0.14) 100%);
+    pointer-events: none;
+  }
+
+  @media (min-width: 2200px) {
+    .mx-hero {
+      min-height: min(56.25vw, 1120px);
+      background:
+        linear-gradient(90deg, #050505 0%, #0c0b0a 18%, #0c0b0a 82%, #050505 100%);
+    }
+
+    .mx-hero__slides,
+    .mx-hero__shade {
+      left: 50%;
+      right: auto;
+      width: min(100vw, 1990px);
+      transform: translateX(-50%);
+    }
+
+    .mx-hero__img {
+      object-fit: contain;
+      object-position: right center !important;
+    }
+
+    .mx-hero__container {
+      max-width: min(1240px, 64vw);
+      padding-bottom: clamp(120px, 8vw, 170px);
+    }
+  }
+
+  .mx-hero__container {
+    position: relative;
+    z-index: 3;
+    min-height: inherit;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: clamp(80px, 8vw, 120px) 24px clamp(88px, 10vh, 132px);
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .mx-hero__content {
+    width: min(100%, 470px);
+    min-height: 430px;
+    color: #f7f2e8;
+  }
+
+  .mx-hero__copy-slide {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: mxHeroCopy 25s infinite;
+  }
+
+  .mx-hero__copy-slide:nth-child(1) { animation-delay: 0s; }
+  .mx-hero__copy-slide:nth-child(2) { animation-delay: 5s; }
+  .mx-hero__copy-slide:nth-child(3) { animation-delay: 10s; }
+  .mx-hero__copy-slide:nth-child(4) { animation-delay: 15s; }
+  .mx-hero__copy-slide:nth-child(5) { animation-delay: 20s; }
+
+  .mx-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    color: #c7a75d !important;
+    font-family: var(--mx-font-body), system-ui, sans-serif !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.34em !important;
+    text-transform: uppercase;
+  }
+
+  .mx-hero__eyebrow::before,
+  .mx-hero__eyebrow::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: rgba(215,189,115,0.58);
+  }
+
+  .mx-hero__title {
+    margin: 0 0 22px;
+    color: #fffaf0 !important;
+    font-family: var(--mx-font-display), "Arial Narrow", Impact, sans-serif !important;
+    font-size: clamp(44px, 5.2vw, 68px);
+    line-height: 0.9 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase;
+    max-width: 500px;
+    text-shadow: 0 18px 38px rgba(0,0,0,0.46);
+  }
+
+  .mx-hero__title-accent {
+    display: inline-block;
+    color: #c4a45b !important;
+    font-family: var(--mx-font-display), "Arial Narrow", Impact, sans-serif !important;
+    font-size: 1em;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 0.96;
+    position: relative;
+    padding-bottom: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .mx-hero__title-accent::after {
+    content: "";
+    position: absolute;
+    left: 0.04em;
+    right: 0.04em;
+    bottom: 0.03em;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(183,148,70,0.52), #d4b766, rgba(183,148,70,0.88), transparent);
+  }
+
+  .mx-hero__desc {
+    max-width: 450px;
+    margin: 0 0 24px;
+    color: rgba(247,242,232,0.88) !important;
+    font-family: var(--mx-font-body), system-ui, sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0 !important;
+    line-height: 1.65 !important;
+    text-shadow: 0 10px 24px rgba(0,0,0,0.48);
+  }
+
+  .mx-hero__proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mx-hero__proof li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 6px 10px;
+    border: 1px solid rgba(215,189,115,0.36);
+    background: rgba(8,7,6,0.44);
+    color: rgba(247,242,232,0.88);
+    font-family: var(--mx-font-body), system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  .mx-hero__proof li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    margin-right: 8px;
+    background: #d7bd73;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(215,189,115,0.12);
+  }
+
+  .mx-hero__btn {
+    min-height: 62px;
+    padding: 17px 42px !important;
+    border: 1px solid rgba(255,255,255,0.22) !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #d2b86d 0%, #bd9d4d 52%, #9e803d 100%) !important;
+    color: #0c0b0a !important;
+    box-shadow: 0 16px 34px rgba(184,154,82,0.28), inset 0 1px 0 rgba(255,255,255,0.42) !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+  }
+
+  .mx-hero__btn:hover {
+    background: linear-gradient(135deg, #ead38d 0%, #c7a75d 55%, #9e7f3b 100%) !important;
+    transform: translateY(-2px);
+  }
+
+  .mx-hero__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    z-index: 4;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-50%);
+  }
+
+  .mx-hero__dot {
+    width: 26px;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.32);
+    overflow: hidden;
+  }
+
+  .mx-hero__dot::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #d7bd73;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: mxHeroDot 25s infinite;
+  }
+
+  .mx-hero__dot:nth-child(1)::after { animation-delay: 0s; }
+  .mx-hero__dot:nth-child(2)::after { animation-delay: 5s; }
+  .mx-hero__dot:nth-child(3)::after { animation-delay: 10s; }
+  .mx-hero__dot:nth-child(4)::after { animation-delay: 15s; }
+  .mx-hero__dot:nth-child(5)::after { animation-delay: 20s; }
+
+  @keyframes mxHeroFade {
+    0% { opacity: 0; }
+    2% { opacity: 1; }
+    18% { opacity: 1; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes mxHeroCopy {
+    0% { opacity: 0; transform: translateY(10px); }
+    3% { opacity: 1; transform: translateY(0); }
+    17% { opacity: 1; transform: translateY(0); }
+    20% { opacity: 0; transform: translateY(-8px); }
+    100% { opacity: 0; transform: translateY(-8px); }
+  }
+
+  @keyframes mxHeroDot {
+    0%, 17.9% { transform: scaleX(0); }
+    2%, 18% { transform: scaleX(1); }
+    18.1%, 100% { transform: scaleX(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mx-hero__slide,
+    .mx-hero__dot::after {
+      animation: none;
+    }
+    .mx-hero__slide:first-child {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .mx-hero {
+      min-height: 820px;
+    }
+
+    .mx-hero__shade {
+      background:
+        linear-gradient(180deg, rgba(8,7,6,0.10) 0%, rgba(8,7,6,0.04) 36%, rgba(8,7,6,0.0) 70%, rgba(8,7,6,0.08) 100%),
+        linear-gradient(90deg, rgba(8,7,6,0.16) 0%, rgba(8,7,6,0.0) 78%);
+    }
+
+    .mx-hero__container {
+      align-items: flex-end;
+      padding: 300px 18px 84px;
+    }
+
+    .mx-hero__content {
+      width: 76%;
+      max-width: 300px;
+      min-height: 270px;
+    }
+
+    .mx-hero__content::before {
+      inset: -20px -14px -24px -14px;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.26) 0%, rgba(0,0,0,0.14) 58%, rgba(0,0,0,0.0) 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.0) 100%);
+      border-radius: 2px;
+    }
+
+    .mx-hero__slide:nth-child(1) .mx-hero__img { object-position: 56% center; }
+    .mx-hero__slide:nth-child(2) .mx-hero__img { object-position: 58% center; }
+    .mx-hero__slide:nth-child(3) .mx-hero__img { object-position: 55% center; }
+    .mx-hero__slide:nth-child(4) .mx-hero__img { object-position: 56% center; }
+    .mx-hero__slide:nth-child(5) .mx-hero__img { object-position: 55% center; }
+
+    .mx-hero__eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      margin-bottom: 10px;
+    }
+
+    .mx-hero__eyebrow::before,
+    .mx-hero__eyebrow::after {
+      width: 18px;
+    }
+
+    .mx-hero__title {
+      font-size: clamp(28px, 8.6vw, 38px);
+      line-height: 0.95 !important;
+      margin-bottom: 10px;
+      max-width: 280px;
+    }
+
+    .mx-hero__desc {
+      max-width: 270px;
+      font-size: 11.5px;
+      line-height: 1.48 !important;
+      margin-bottom: 12px;
+    }
+
+    .mx-hero__proof {
+      display: none;
+    }
+
+    .mx-hero__proof li {
+      min-height: 28px;
+      padding: 6px 9px;
+      font-size: 9.5px;
+      letter-spacing: 0.08em;
+    }
+
+    .mx-hero__btn {
+      width: auto !important;
+      min-height: 48px;
+      padding: 14px 24px !important;
+      font-size: 10px !important;
+      letter-spacing: 0.12em !important;
+    }
+
+    .mx-hero__dots {
+      bottom: 18px;
+    }
+  }
+</style>
+
+<div class="mx-hero" data-mx-hero-slider>
+  <div class="mx-hero__slides" aria-hidden="true">
+    <div class="mx-hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" srcset="{{ slide_1_mobile }}">
+        <img src="{{ slide_1_desktop }}" alt="" class="mx-hero__img" loading="eager" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="mx-hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" data-srcset="{{ slide_2_mobile }}">
+        <img data-src="{{ slide_2_desktop }}" alt="" class="mx-hero__img" loading="lazy">
+      </picture>
+    </div>
+    <div class="mx-hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" data-srcset="{{ slide_3_mobile }}">
+        <img data-src="{{ slide_3_desktop }}" alt="" class="mx-hero__img" loading="lazy">
+      </picture>
+    </div>
+    <div class="mx-hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" data-srcset="{{ slide_4_mobile }}">
+        <img data-src="{{ slide_4_desktop }}" alt="" class="mx-hero__img" loading="lazy">
+      </picture>
+    </div>
+    <div class="mx-hero__slide">
+      <picture>
+        <source media="(max-width: 767px)" data-srcset="{{ slide_5_mobile }}">
+        <img data-src="{{ slide_5_desktop }}" alt="" class="mx-hero__img" loading="lazy">
+      </picture>
+    </div>
+  </div>
+
+  <div class="mx-hero__shade"></div>
+
+  <div class="mx-hero__container">
+    <div class="mx-hero__content">
+      <div class="mx-hero__copy-slide">
+        <p class="mx-hero__eyebrow">Ritual de espejo</p>
+        <h2 class="mx-hero__title">Barba cuidada<span class="mx-hero__title-accent">presencia real</span></h2>
+        <p class="mx-hero__desc">Activa tu rutina con una fórmula premium pensada para rellenar, definir y verte mejor cada semana.</p>
+        <ul class="mx-hero__proof" aria-label="Beneficios principales"><li>Uso diario</li><li>Absorción rápida</li><li>Textura premium</li></ul>
+        <a href="{{ section.settings.btn_link | default: '#Tag-Comprar' }}" class="mx-btn mx-btn--primary mx-hero__btn">Iniciar mi cambio ahora</a>
+      </div>
+      <div class="mx-hero__copy-slide">
+        <p class="mx-hero__eyebrow">Maximus 20%</p>
+        <h2 class="mx-hero__title">Densidad visible<span class="mx-hero__title-accent">sin complicarte</span></h2>
+        <p class="mx-hero__desc">Una aplicación limpia para hombres que quieren una barba más llena, con carácter y sin rutinas eternas.</p>
+        <ul class="mx-hero__proof" aria-label="Beneficios principales"><li>700+ clientes</li><li>Soporte directo</li><li>Pago seguro</li></ul>
+        <a href="{{ section.settings.btn_link | default: '#Tag-Comprar' }}" class="mx-btn mx-btn--primary mx-hero__btn">Quiero mi barba ahora</a>
+      </div>
+      <div class="mx-hero__copy-slide">
+        <p class="mx-hero__eyebrow">Barbería premium</p>
+        <h2 class="mx-hero__title">El producto habla<span class="mx-hero__title-accent">tu barba responde</span></h2>
+        <p class="mx-hero__desc">Constancia, potencia y una fórmula creada para dar forma donde antes faltaba densidad.</p>
+        <ul class="mx-hero__proof" aria-label="Beneficios principales"><li>Desde semana 4</li><li>Garantía 30 días</li><li>Clientes reales</li></ul>
+        <a href="{{ section.settings.btn_link | default: '#Tag-Comprar' }}" class="mx-btn mx-btn--primary mx-hero__btn">Empezar mi rutina</a>
+      </div>
+      <div class="mx-hero__copy-slide">
+        <p class="mx-hero__eyebrow">Estilo diario</p>
+        <h2 class="mx-hero__title">Tu look cambia<span class="mx-hero__title-accent">cuando decides</span></h2>
+        <p class="mx-hero__desc">Para el hombre que quiere verse seguro, pulido y listo sin perder tiempo frente al espejo.</p>
+        <ul class="mx-hero__proof" aria-label="Beneficios principales"><li>Empaque discreto</li><li>Envío express</li><li>Rutina simple</li></ul>
+        <a href="{{ section.settings.btn_link | default: '#Tag-Comprar' }}" class="mx-btn mx-btn--primary mx-hero__btn">Tomar acción hoy</a>
+      </div>
+      <div class="mx-hero__copy-slide">
+        <p class="mx-hero__eyebrow">Tu mejor versión</p>
+        <h2 class="mx-hero__title">No es suerte<span class="mx-hero__title-accent">es constancia</span></h2>
+        <p class="mx-hero__desc">Dale a tu barba el impulso que necesita con una rutina potente, masculina y hecha para resultados reales.</p>
+        <ul class="mx-hero__proof" aria-label="Beneficios principales"><li>Fórmula premium</li><li>30 días de garantía</li><li>Compra segura</li></ul>
+        <a href="{{ section.settings.btn_link | default: '#Tag-Comprar' }}" class="mx-btn mx-btn--primary mx-hero__btn">Quiero empezar hoy</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-hero__dots" aria-hidden="true">
+    <span class="mx-hero__dot"></span>
+    <span class="mx-hero__dot"></span>
+    <span class="mx-hero__dot"></span>
+    <span class="mx-hero__dot"></span>
+    <span class="mx-hero__dot"></span>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function loadDeferredSlides() {
+      var isMobile = window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+
+      document.querySelectorAll('.mx-hero__slide img[data-src]').forEach(function(img) {
+        var picture = img.closest('picture');
+        var mobileSource = picture ? picture.querySelector('[data-srcset]') : null;
+
+        if (isMobile && mobileSource) {
+          var mobileUrl = mobileSource.getAttribute('data-srcset');
+          mobileSource.setAttribute('srcset', mobileUrl);
+          mobileSource.removeAttribute('data-srcset');
+          img.src = mobileUrl;
+        } else {
+          img.src = img.getAttribute('data-src');
+        }
+
+        img.removeAttribute('data-src');
+      });
+
+      if (!isMobile) {
+        document.querySelectorAll('.mx-hero__slide [data-srcset]').forEach(function(source) {
+          source.removeAttribute('data-srcset');
+        });
+      }
+    }
+
+    function handleScrollClick(e) {
+      var href = this.getAttribute('href');
+      if (!href || href.charAt(0) !== '#') return;
+
+      var targetEl = document.getElementById(href.substring(1));
+      if (!targetEl) return;
+
+      e.preventDefault();
+      var offset = window.innerWidth < 768 ? 100 : 120;
+      var elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+
+    function setupScroll() {
+      document.querySelectorAll('.mx-hero__btn').forEach(function(heroBtn) {
+        heroBtn.removeEventListener('click', handleScrollClick);
+        heroBtn.addEventListener('click', handleScrollClick);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        setupScroll();
+        setTimeout(loadDeferredSlides, 900);
+      });
+    } else {
+      setupScroll();
+      setTimeout(loadDeferredSlides, 900);
+    }
+
+    document.addEventListener('shopify:section:load', setupScroll);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "MX Hero Banner",
+  "tag": "section",
+  "class": "mx-hero-banner-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Copete / Ceja",
+      "default": "BALSAMO NUMERO UNO"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo",
+      "default": "EL MEJOR CRECIMIENTO"
+    },
+    {
+      "type": "text",
+      "id": "title_accent",
+      "label": "Titulo acento",
+      "default": "DE MEXICO"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripcion",
+      "default": "Despierta foliculos dormidos, rellena zonas vacias y define tu caracter con una formula potente, premium y enfocada en barba."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto del boton",
+      "default": "INICIAR MI CAMBIO AHORA"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Enlace del boton"
+    }
+  ],
+  "presets": [
+    {
+      "name": "MX Hero Banner"
+    }
+  ]
+}
+{% endschema %}

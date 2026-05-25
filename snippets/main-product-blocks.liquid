@@ -1110,53 +1110,303 @@
           {% endif %}
         </div>
       {%- when 'shipping' -%}
-        <ul class="m-product-shipping">
-          {% if block.settings.show_delivery_times %}
-            <li class="m-product-shipping--item m:display-flex m:items-center">
-              <span class="m-product-shipping--icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.5 7.50087H20.4938C20.6432 7.4999 20.7894 7.54415 20.9132 7.62781C21.037 7.71147 21.1326 7.83062 21.1875 7.96962L22.5 11.2509" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1.5 13.5009H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M17.625 20.2509C18.8676 20.2509 19.875 19.2435 19.875 18.0009C19.875 16.7582 18.8676 15.7509 17.625 15.7509C16.3824 15.7509 15.375 16.7582 15.375 18.0009C15.375 19.2435 16.3824 20.2509 17.625 20.2509Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-                  <path d="M6.375 20.2509C7.61764 20.2509 8.625 19.2435 8.625 18.0009C8.625 16.7582 7.61764 15.7509 6.375 15.7509C5.13236 15.7509 4.125 16.7582 4.125 18.0009C4.125 19.2435 5.13236 20.2509 6.375 20.2509Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
-                  <path d="M15.375 18.0009H8.625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M4.125 18.0009H2.25C2.05109 18.0009 1.86032 17.9218 1.71967 17.7812C1.57902 17.6405 1.5 17.4498 1.5 17.2509V6.75085C1.5 6.55194 1.57902 6.36118 1.71967 6.22052C1.86032 6.07987 2.05109 6.00085 2.25 6.00085H16.5V16.0509" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M16.5 11.2509H22.5V17.2509C22.5 17.4498 22.421 17.6405 22.2803 17.7812C22.1397 17.9218 21.9489 18.0009 21.75 18.0009H19.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              {% liquid
-                assign range = 2 | times: 24 | times: 60 | times: 60
-                assign deliver_in = block.settings.deliver_days | times: 24 | times: 60 | times: 60
-                assign date_format = block.settings.date_format | default: '%b %d'
-                assign now = 'now' | date: '%s'
+        <div class="mx-shipping-card">
+          <div class="mx-shipping-card__header">
+            <div class="mx-shipping-card__truck-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mx-shipping-card__truck-icon">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="mx-shipping-card__title-wrap">
+              <span class="mx-shipping-card__label">Entrega Estimada</span>
+              <h4 class="mx-shipping-card__date" id="mx-delivery-date-calc">Calculando fecha de entrega...</h4>
+            </div>
+          </div>
 
-                assign from = now | plus: deliver_in | minus: range | date: date_format
-                assign to = now | plus: deliver_in | plus: range | date: date_format
-              %}
-              <div class="m-product-shipping--content m:display-flex">
-                <p>
-                  <strong>{{ block.settings.deliver_text | strip_html }}</strong
-                  ><span class="m-product-shipping--content__value">{{ from }} - {{ to }}</span>
-                </p>
-              </div>
-            </li>
-          {% endif %}
-          {% if block.settings.show_shipping_text and block.settings.shipping_text != blank %}
-            <li class="m-product-shipping--item m-product-shipping--text m:display-flex m:items-center">
-              <span class="m-product-shipping--icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 16.6231V7.37934C20.9993 7.24582 20.9634 7.11484 20.8959 6.99963C20.8284 6.88441 20.7317 6.78903 20.6156 6.72309L12.3656 2.08247C12.2545 2.01829 12.1284 1.9845 12 1.9845C11.8716 1.9845 11.7455 2.01829 11.6344 2.08247L3.38437 6.72309C3.26827 6.78903 3.1716 6.88441 3.10411 6.99963C3.03663 7.11484 3.00072 7.24582 3 7.37934V16.6231C3.00072 16.7566 3.03663 16.8876 3.10411 17.0028C3.1716 17.118 3.26827 17.2134 3.38437 17.2793L11.6344 21.92C11.7455 21.9841 11.8716 22.0179 12 22.0179C12.1284 22.0179 12.2545 21.9841 12.3656 21.92L20.6156 17.2793C20.7317 17.2134 20.8284 17.118 20.8959 17.0028C20.9634 16.8876 20.9993 16.7566 21 16.6231Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M16.5938 14.2977V9.42273L7.5 4.4071" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M20.8963 6.99426L12.0838 12.0005L3.10254 6.99426" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12.0844 12.0009L12 22.0134" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div class="m-product-shipping--content m:display-flex rte">
-                {{ block.settings.shipping_text }}
-              </div>
-            </li>
-          {% endif %}
-        </ul>
+          <!-- Línea de progreso de envío -->
+          <div class="mx-shipping-progress">
+            <div class="mx-shipping-progress__step is-active">
+              <span class="mx-shipping-progress__dot"></span>
+              <span class="mx-shipping-progress__label">Compra Segura</span>
+            </div>
+            <div class="mx-shipping-progress__line is-active"></div>
+            <div class="mx-shipping-progress__step is-active">
+              <span class="mx-shipping-progress__dot"></span>
+              <span class="mx-shipping-progress__label">Procesado hoy</span>
+            </div>
+            <div class="mx-shipping-progress__line is-active is-pulse"></div>
+            <div class="mx-shipping-progress__step is-deliver">
+              <span class="mx-shipping-progress__dot"></span>
+              <span class="mx-shipping-progress__label" id="mx-delivery-range-label">Recibe: 2-4 días</span>
+            </div>
+          </div>
+
+          <!-- Detalles adicionales (Garantías) -->
+          <div class="mx-shipping-card__details">
+            <div class="mx-shipping-card__detail-item">
+              <span class="mx-shipping-card__detail-icon">🚚</span>
+              <p class="mx-shipping-card__detail-text"><strong>Envío Express Gratis</strong> en compras desde $699 MXN.</p>
+            </div>
+            <div class="mx-shipping-card__detail-item">
+              <span class="mx-shipping-card__detail-icon">🛡️</span>
+              <p class="mx-shipping-card__detail-text"><strong>Garantía Maximus:</strong> 30 días de satisfacción total.</p>
+            </div>
+            <div class="mx-shipping-card__detail-item">
+              <span class="mx-shipping-card__detail-icon">📦</span>
+              <p class="mx-shipping-card__detail-text"><strong>Empaque Discreto:</strong> Sin marcas ni contenido visible.</p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          (function() {
+            function updateDeliveryDates() {
+              var dateEl = document.getElementById('mx-delivery-date-calc');
+              var rangeEl = document.getElementById('mx-delivery-range-label');
+              if (!dateEl) return;
+
+              var months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+              var days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+              var now = new Date();
+              
+              // 2 a 4 días de entrega
+              var startDays = 2;
+              var endDays = 4;
+              
+              var dateFrom = new Date(now.getTime() + startDays * 24 * 60 * 60 * 1000);
+              var dateTo = new Date(now.getTime() + endDays * 24 * 60 * 60 * 1000);
+
+              // Formato: Martes 26 - Jueves 28 de May
+              var monthName = months[dateTo.getMonth()];
+              var dateString = days[dateFrom.getDay()] + " " + dateFrom.getDate() + " - " + days[dateTo.getDay()] + " " + dateTo.getDate() + " de " + monthName;
+
+              dateEl.textContent = dateString;
+              if (rangeEl) {
+                rangeEl.textContent = "Recibe: " + monthName + " " + dateFrom.getDate() + "-" + dateTo.getDate();
+              }
+            }
+
+            // Ejecutar
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', updateDeliveryDates);
+            } else {
+              updateDeliveryDates();
+            }
+          })();
+        </script>
+
+        <style>
+          .mx-shipping-card {
+            margin: 20px 0;
+            padding: 18px;
+            background: #fdfdfb;
+            border: 1px solid #e2dbca;
+            border-radius: 8px;
+            font-family: var(--mx-font-body), sans-serif;
+          }
+
+          .mx-shipping-card__header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+          }
+
+          .mx-shipping-card__truck-icon-wrap {
+            width: 40px;
+            height: 40px;
+            background: rgba(184, 154, 82, 0.1);
+            color: #b89a52;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+
+          .mx-shipping-card__truck-icon {
+            width: 22px;
+            height: 22px;
+          }
+
+          .mx-shipping-card__title-wrap {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .mx-shipping-card__label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8b8577;
+            font-weight: 600;
+            line-height: 1.2;
+          }
+
+          .mx-shipping-card__date {
+            font-family: var(--mx-font-display), sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0c0b0a;
+            margin: 2px 0 0 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+          }
+
+          /* Progress Line */
+          .mx-shipping-progress {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 18px 0 22px;
+            padding: 0 4px;
+            position: relative;
+          }
+
+          .mx-shipping-progress__step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 80px;
+          }
+
+          .mx-shipping-progress__dot {
+            width: 10px;
+            height: 10px;
+            background: #d4cfc4;
+            border-radius: 50%;
+            margin-bottom: 6px;
+            transition: background 0.3s;
+          }
+
+          .mx-shipping-progress__step.is-active .mx-shipping-progress__dot {
+            background: #b89a52;
+            box-shadow: 0 0 0 4px rgba(184, 154, 82, 0.15);
+          }
+
+          .mx-shipping-progress__step.is-deliver .mx-shipping-progress__dot {
+            background: #2e7d32;
+            box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.15);
+          }
+
+          .mx-shipping-progress__label {
+            font-size: 9px;
+            color: #8b8577;
+            font-weight: 500;
+            line-height: 1.1;
+            white-space: nowrap;
+          }
+
+          .mx-shipping-progress__step.is-active .mx-shipping-progress__label {
+            color: #0c0b0a;
+            font-weight: 700;
+          }
+
+          .mx-shipping-progress__step.is-deliver .mx-shipping-progress__label {
+            color: #2e7d32;
+            font-weight: 700;
+          }
+
+          .mx-shipping-progress__line {
+            flex-grow: 1;
+            height: 2px;
+            background: #e2dbca;
+            margin-top: -16px;
+            position: relative;
+            z-index: 1;
+          }
+
+          .mx-shipping-progress__line.is-active {
+            background: #b89a52;
+          }
+
+          .mx-shipping-progress__line.is-pulse::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, #b89a52, #2e7d32);
+            opacity: 0.6;
+          }
+
+          /* Details list */
+          .mx-shipping-card__details {
+            border-top: 1px solid rgba(184, 154, 82, 0.15);
+            padding-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .mx-shipping-card__detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+          }
+
+          .mx-shipping-card__detail-icon {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+
+          .mx-shipping-card__detail-text {
+            font-size: 11px;
+            color: #5a5449;
+            margin: 0 !important;
+            line-height: 1.35;
+          }
+
+          .mx-shipping-card__detail-text strong {
+            color: #0c0b0a;
+          }
+
+          /* Dark Mode Adaptation */
+          .m-color-dark .mx-shipping-card {
+            background: #171512;
+            border-color: rgba(184, 154, 82, 0.2);
+          }
+
+          .m-color-dark .mx-shipping-card__title-wrap .mx-shipping-card__date {
+            color: #f5f2ea;
+          }
+
+          .m-color-dark .mx-shipping-card__label {
+            color: #a49e91;
+          }
+
+          .m-color-dark .mx-shipping-progress__step.is-active .mx-shipping-progress__label {
+            color: #f5f2ea;
+          }
+
+          .m-color-dark .mx-shipping-card__detail-text {
+            color: #d4cfc4;
+          }
+
+          .m-color-dark .mx-shipping-card__detail-text strong {
+            color: #f5f2ea;
+          }
+
+          @media (max-width: 480px) {
+            .mx-shipping-card {
+              padding: 14px;
+            }
+            .mx-shipping-card__date {
+              font-size: 15px;
+            }
+            .mx-shipping-progress__label {
+              font-size: 8px;
+            }
+            .mx-shipping-progress__step {
+              width: 70px;
+            }
+          }
+        </style>
       {%- when 'complementary' -%}
         {% render 'hs-defer-css' with filename: 'product-complementary.aio.min.css', pages: 'collection,index,product' | split: ',', minify: false, local: true %}
         {%- if settings.show_swatch_option == false and block.settings.enable_variant_options -%}

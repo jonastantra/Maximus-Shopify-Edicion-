@@ -1,0 +1,184 @@
+<div class="mx-beard-guide">
+  <p class="mx-beard-guide__title">Guía: Elige según tu tipo de barba</p>
+  <div class="mx-beard-guide__grid">
+    
+    <div class="mx-beard-guide__item">
+      <span class="mx-beard-guide__badge">Inicio</span>
+      <p class="mx-beard-guide__option">1 Bote</p>
+      <p class="mx-beard-guide__duration">1.5 Meses</p>
+      <p class="mx-beard-guide__desc">Para detallar, engrosar o rellenar huecos mínimos.</p>
+    </div>
+
+    <div class="mx-beard-guide__item is-popular">
+      <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Popular</span>
+      <p class="mx-beard-guide__option">3 Botes</p>
+      <p class="mx-beard-guide__duration">3 Meses</p>
+      <p class="mx-beard-guide__desc">Para barba parcial, parches grandes y mejillas.</p>
+    </div>
+
+    <div class="mx-beard-guide__item is-recommended">
+      <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Recomendado</span>
+      <p class="mx-beard-guide__option">6 Botes</p>
+      <p class="mx-beard-guide__duration">6 Meses</p>
+      <p class="mx-beard-guide__desc">Para lampiños. Tratamiento completo y permanente.</p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .mx-beard-guide {
+    margin: 18px 0 20px 0;
+    padding: 16px;
+    background: #fdfdfb;
+    border: 1px solid #e2dbca;
+    border-radius: 8px;
+    font-family: var(--mx-font-body), sans-serif;
+  }
+
+  .mx-beard-guide__title {
+    font-family: var(--mx-font-display), sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #0c0b0a;
+    text-transform: uppercase;
+    margin: 0 0 14px 0 !important;
+    text-align: center;
+    border-bottom: 1px solid rgba(184, 154, 82, 0.15);
+    padding-bottom: 6px;
+  }
+
+  .mx-beard-guide__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .mx-beard-guide__item {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e0d9c8;
+    border-radius: 6px;
+    padding: 14px 8px 10px 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+  }
+
+  .mx-beard-guide__item.is-popular {
+    border-color: #b89a52;
+    background: #fffdf9;
+  }
+
+  .mx-beard-guide__item.is-recommended {
+    border-color: #0c0b0a;
+    background: #fafaf8;
+  }
+
+  .mx-beard-guide__badge {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8b8577;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 100px;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  .mx-beard-guide__badge--gold {
+    background: #b89a52;
+  }
+
+  .mx-beard-guide__item.is-recommended .mx-beard-guide__badge {
+    background: #0c0b0a;
+    color: #b89a52;
+  }
+
+  .mx-beard-guide__option {
+    font-family: var(--mx-font-display), sans-serif;
+    font-size: 15px;
+    color: #0c0b0a;
+    margin: 0 !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .mx-beard-guide__duration {
+    font-size: 11px;
+    font-weight: 700;
+    color: #b89a52;
+    margin: 2px 0 6px 0 !important;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .mx-beard-guide__desc {
+    font-size: 9px;
+    color: #6c6659;
+    line-height: 1.25;
+    margin: 0 !important;
+  }
+
+  /* Adaptación para temas oscuros */
+  .m-color-dark .mx-beard-guide {
+    background: #171512;
+    border-color: rgba(184,154,82,0.2);
+  }
+  .m-color-dark .mx-beard-guide__title {
+    color: #f5f2ea;
+  }
+  .m-color-dark .mx-beard-guide__item {
+    background: #1e1b17;
+    border-color: rgba(184,154,82,0.15);
+  }
+  .m-color-dark .mx-beard-guide__item.is-popular {
+    border-color: #b89a52;
+    background: #23201a;
+  }
+  .m-color-dark .mx-beard-guide__item.is-recommended {
+    border-color: #f5f2ea;
+    background: #25221d;
+  }
+  .m-color-dark .mx-beard-guide__option {
+    color: #f5f2ea;
+  }
+  .m-color-dark .mx-beard-guide__desc {
+    color: #d4cfc4;
+  }
+
+  @media (max-width: 480px) {
+    .mx-beard-guide {
+      padding: 12px 10px;
+    }
+    .mx-beard-guide__grid {
+      gap: 6px;
+    }
+    .mx-beard-guide__item {
+      padding: 12px 4px 8px 4px;
+    }
+    .mx-beard-guide__option {
+      font-size: 13px;
+    }
+    .mx-beard-guide__duration {
+      font-size: 9.5px;
+    }
+    .mx-beard-guide__desc {
+      font-size: 8px;
+    }
+    .mx-beard-guide__badge {
+      font-size: 7px;
+      padding: 1px 4px;
+    }
+  }
+</style>

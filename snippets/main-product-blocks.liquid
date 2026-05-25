@@ -316,6 +316,9 @@
           product_form_id: product_form_id
         %}
       {%- when 'buy_buttons' -%}
+        {% if product.handle contains 'balsamo' or product.handle contains 'minoxidil' or product.handle contains 'balsam' %}
+          {% render 'mx-beard-guide' %}
+        {% endif %}
         {% liquid
           assign gift_card_recipient_feature_active = false
           if block.settings.show_gift_card_recipient and product.gift_card?
@@ -778,6 +781,20 @@
                 <span class="mx-wyget__text">Envío Express Gratis a todo México</span>
               </li>
             </ul>
+            <div class="mx-wyget__badges">
+              <div class="mx-wyget__badge">
+                <span class="mx-wyget__badge-icon">🧪</span>
+                <span class="mx-wyget__badge-text">Minoxidil 20%</span>
+              </div>
+              <div class="mx-wyget__badge">
+                <span class="mx-wyget__badge-icon">🛡️</span>
+                <span class="mx-wyget__badge-text">Bergamota/Menta</span>
+              </div>
+              <div class="mx-wyget__badge">
+                <span class="mx-wyget__badge-icon">🩺</span>
+                <span class="mx-wyget__badge-text">Dermo-probado</span>
+              </div>
+            </div>
             <p class="mx-wyget__foot">Cada envase rinde para <strong>1.5 meses</strong> de tratamiento diario.</p>
           </div>
 
@@ -838,6 +855,37 @@
               line-height: 1.35;
               font-weight: 500;
             }
+            .mx-wyget__badges {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 6px;
+              margin: 16px 0 !important;
+              padding-top: 14px;
+              border-top: 1px solid rgba(184, 154, 82, 0.2);
+            }
+            .mx-wyget__badge {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              background: #fff;
+              border: 1px solid #e0d9c8;
+              border-radius: 6px;
+              padding: 8px 2px;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            }
+            .mx-wyget__badge-icon {
+              font-size: 14px;
+              margin-bottom: 4px;
+            }
+            .mx-wyget__badge-text {
+              font-size: 8px;
+              font-weight: 700;
+              color: #0c0b0a;
+              text-transform: uppercase;
+              line-height: 1.1;
+              letter-spacing: 0.02em;
+            }
             .mx-wyget__foot {
               font-size: 12.5px;
               color: #5a5449;
@@ -860,6 +908,13 @@
               color: #f5f2ea;
             }
             .m-color-dark .mx-wyget__text {
+              color: #f5f2ea;
+            }
+            .m-color-dark .mx-wyget__badge {
+              background: #1e1b17;
+              border-color: rgba(184, 154, 82, 0.15);
+            }
+            .m-color-dark .mx-wyget__badge-text {
               color: #f5f2ea;
             }
             .m-color-dark .mx-wyget__foot {

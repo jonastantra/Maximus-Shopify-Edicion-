@@ -3,17 +3,27 @@
   <div class="mx-beard-guide__grid">
     
     <div class="mx-beard-guide__item" onclick="mxSelectBundle(0)">
-      <span class="mx-beard-guide__badge">Inicio</span>
+      <span class="mx-beard-guide__badge">Fase Inicial</span>
       <p class="mx-beard-guide__option">1 Bote</p>
-      <p class="mx-beard-guide__duration">1.5 Meses</p>
-      <p class="mx-beard-guide__desc">Para detallar, engrosar o rellenar huecos mínimos.</p>
+      <p class="mx-beard-guide__duration">1.5 Meses de Uso</p>
+      <div class="mx-beard-guide__points">
+        <div class="mx-beard-guide__point">Rellena huecos pequeños</div>
+        <div class="mx-beard-guide__point">Ideal para detallar y perfilar</div>
+        <div class="mx-beard-guide__point">Engrosa vello fino existente</div>
+      </div>
+      <p class="mx-beard-guide__footer">Ideal para probar textura y tolerancia</p>
     </div>
 
     <div class="mx-beard-guide__item is-popular" onclick="mxSelectBundle(1)">
-      <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Popular</span>
+      <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Recomendado</span>
       <p class="mx-beard-guide__option">2 Botes</p>
-      <p class="mx-beard-guide__duration">3 Meses</p>
-      <p class="mx-beard-guide__desc">Para barba parcial, parches grandes y mejillas.</p>
+      <p class="mx-beard-guide__duration">3 Meses de Uso</p>
+      <div class="mx-beard-guide__points">
+        <div class="mx-beard-guide__point">Cierra parches grandes y mejillas</div>
+        <div class="mx-beard-guide__point"><strong>Ciclo biológico mínimo</strong></div>
+        <div class="mx-beard-guide__point"><strong>Envío Express GRATIS</strong></div>
+      </div>
+      <p class="mx-beard-guide__footer mx-beard-guide__footer--gold">Evita que el vello nuevo se caiga al suspender</p>
     </div>
 
   </div>
@@ -62,16 +72,13 @@
   // Sync back when Kaching is clicked directly
   (function() {
     function setupKachingSync() {
-      // Find Kaching Bundles container
       var container = document.querySelector('[class*="kaching-bundles"]');
       if (!container) return;
 
       container.addEventListener('click', function(e) {
-        // Detect which deal card was clicked
         var dealCard = e.target.closest('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]');
         if (!dealCard) return;
 
-        // Find index of clicked deal card
         var cards = Array.from(container.querySelectorAll('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]'));
         var index = cards.indexOf(dealCard);
         
@@ -87,7 +94,6 @@
       setTimeout(function() {
         var cards = container.querySelectorAll('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]');
         cards.forEach(function(card, idx) {
-          // Kaching usually adds a selected class like is-selected, active, or checked
           var isSelected = card.classList.contains('is-selected') || 
                            card.classList.contains('active') || 
                            card.querySelector('input[type="radio"]:checked') !== null ||
@@ -102,7 +108,6 @@
       }, 1000);
     }
 
-    // Run setup after load
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', setupKachingSync);
     } else {
@@ -145,7 +150,7 @@
     background: #fff;
     border: 1px solid #e0d9c8;
     border-radius: 6px;
-    padding: 16px 8px 12px 8px;
+    padding: 18px 10px 14px 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -202,7 +207,7 @@
 
   .mx-beard-guide__option {
     font-family: var(--mx-font-display), sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #0c0b0a;
     margin: 0 !important;
     text-transform: uppercase;
@@ -219,11 +224,47 @@
     line-height: 1;
   }
 
-  .mx-beard-guide__desc {
-    font-size: 9px;
-    color: #6c6659;
+  .mx-beard-guide__points {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    width: 100%;
+    margin: 10px 0 12px 0;
+  }
+
+  .mx-beard-guide__point {
+    font-size: 10px;
+    color: #494640;
+    line-height: 1.35;
+    position: relative;
+    padding-left: 14px;
+    text-align: left;
+  }
+
+  .mx-beard-guide__point::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #b89a52;
+    font-weight: 700;
+  }
+
+  .mx-beard-guide__footer {
+    font-size: 8.5px;
+    font-style: italic;
+    color: #7a7570;
+    margin-top: auto !important;
     line-height: 1.3;
-    margin: 0 !important;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mx-beard-guide__footer--gold {
+    color: #b89a52;
+    font-weight: 600;
   }
 
   /* Adaptación para temas oscuros */
@@ -249,8 +290,15 @@
   .m-color-dark .mx-beard-guide__option {
     color: #f5f2ea;
   }
-  .m-color-dark .mx-beard-guide__desc {
+  .m-color-dark .mx-beard-guide__point {
     color: #d4cfc4;
+  }
+  .m-color-dark .mx-beard-guide__footer {
+    color: #a09a8f;
+    border-top-color: rgba(255,255,255,0.06);
+  }
+  .m-color-dark .mx-beard-guide__footer--gold {
+    color: #b89a52;
   }
 
   @media (max-width: 480px) {
@@ -261,21 +309,26 @@
       gap: 8px;
     }
     .mx-beard-guide__item {
-      padding: 14px 4px 10px 4px;
+      padding: 16px 4px 12px 4px;
     }
     .mx-beard-guide__option {
-      font-size: 13px;
+      font-size: 14px;
     }
     .mx-beard-guide__duration {
-      font-size: 9.5px;
+      font-size: 10px;
     }
-    .mx-beard-guide__desc {
-      font-size: 8px;
+    .mx-beard-guide__point {
+      font-size: 9px;
+      padding-left: 12px;
       line-height: 1.25;
     }
+    .mx-beard-guide__footer {
+      font-size: 8px;
+      padding-top: 6px;
+    }
     .mx-beard-guide__badge {
-      font-size: 7px;
-      padding: 1px 4px;
+      font-size: 7.5px;
+      padding: 1px 5px;
     }
   }
 </style>

@@ -61,14 +61,21 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "mx_beard_guide": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.handle contains 'balsamo' or product.handle contains 'minoxidil' or product.handle contains 'balsam' %}{% render 'mx-beard-guide' %}{% endif %}"
+          }
         }
       },
       "block_order": [
-        "kaching_bundles_app_block_8pFXrD",
         "7867d69c-9018-4e43-9ab1-c0dabc50ab83",
         "title",
         "price",
         "variant_picker",
+        "mx_beard_guide",
+        "kaching_bundles_app_block_8pFXrD",
         "buy_buttons"
       ],
       "settings": {

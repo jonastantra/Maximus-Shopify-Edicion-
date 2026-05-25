@@ -132,6 +132,12 @@
             "show_shipping_text": true,
             "shipping_text": "<p><strong>Envio GRATIS incluido</strong> en pedidos desde $699 MXN.<br/><strong>Garantia Maximus:</strong> 30 dias de satisfaccion total.<br/><strong>Empaque discreto</strong> y pago seguro.</p>"
           }
+        },
+        "mx_beard_guide": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.handle contains 'balsamo' or product.handle contains 'minoxidil' or product.handle contains 'balsam' %}{% render 'mx-beard-guide' %}{% endif %}"
+          }
         }
       },
       "block_order": [
@@ -141,6 +147,7 @@
         "price",
         "foxkit_stock_countdown_WbXfUB",
         "variant_picker",
+        "mx_beard_guide",
         "buy_buttons",
         "custom_liquid_jYCHCm",
         "collapsible_tab_m8garm",
@@ -332,5 +339,3 @@
     "mx_cierre"
   ]
 }
-
-

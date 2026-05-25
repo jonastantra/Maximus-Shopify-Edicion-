@@ -76,11 +76,18 @@
             "show_atc_button": true,
             "show_dynamic_checkout": false
           }
+        },
+        "mx_beard_guide": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if section.settings.featured_product != blank %}{% assign featured_prod = all_products[section.settings.featured_product] %}{% if featured_prod.handle contains 'balsamo' or featured_prod.handle contains 'minoxidil' or featured_prod.handle contains 'balsam' %}{% render 'mx-beard-guide', product: featured_prod %}{% endif %}{% endif %}"
+          }
         }
       },
       "block_order": [
         "custom_liquid_iKfJiU",
         "title_VyiRcL",
+        "mx_beard_guide",
         "kaching_bundles_app_block_zMQGtd",
         "price_AiNUdf",
         "inventory_status_GqjdNU",
@@ -272,5 +279,3 @@
     "mx_cierre"
   ]
 }
-
-

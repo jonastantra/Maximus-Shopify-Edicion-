@@ -316,9 +316,6 @@
           product_form_id: product_form_id
         %}
       {%- when 'buy_buttons' -%}
-        {% if product.handle contains 'balsamo' or product.handle contains 'minoxidil' or product.handle contains 'balsam' %}
-          {% render 'mx-beard-guide' %}
-        {% endif %}
         {% liquid
           assign gift_card_recipient_feature_active = false
           if block.settings.show_gift_card_recipient and product.gift_card?
@@ -784,7 +781,7 @@
             <div class="mx-wyget__badges">
               <div class="mx-wyget__badge">
                 <span class="mx-wyget__badge-icon">🧪</span>
-                <span class="mx-wyget__badge-text">Minoxidil 20%</span>
+                <span class="mx-wyget__badge-text">Fórmula Premium</span>
               </div>
               <div class="mx-wyget__badge">
                 <span class="mx-wyget__badge-icon">🛡️</span>

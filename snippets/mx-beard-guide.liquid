@@ -2,29 +2,114 @@
   <p class="mx-beard-guide__title">Guía: Elige según tu tipo de barba</p>
   <div class="mx-beard-guide__grid">
     
-    <div class="mx-beard-guide__item">
+    <div class="mx-beard-guide__item" onclick="mxSelectBundle(0)">
       <span class="mx-beard-guide__badge">Inicio</span>
       <p class="mx-beard-guide__option">1 Bote</p>
       <p class="mx-beard-guide__duration">1.5 Meses</p>
       <p class="mx-beard-guide__desc">Para detallar, engrosar o rellenar huecos mínimos.</p>
     </div>
 
-    <div class="mx-beard-guide__item is-popular">
+    <div class="mx-beard-guide__item is-popular" onclick="mxSelectBundle(1)">
       <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Popular</span>
-      <p class="mx-beard-guide__option">3 Botes</p>
+      <p class="mx-beard-guide__option">2 Botes</p>
       <p class="mx-beard-guide__duration">3 Meses</p>
       <p class="mx-beard-guide__desc">Para barba parcial, parches grandes y mejillas.</p>
     </div>
 
-    <div class="mx-beard-guide__item is-recommended">
-      <span class="mx-beard-guide__badge mx-beard-guide__badge--gold">Recomendado</span>
-      <p class="mx-beard-guide__option">6 Botes</p>
-      <p class="mx-beard-guide__duration">6 Meses</p>
-      <p class="mx-beard-guide__desc">Para lampiños. Tratamiento completo y permanente.</p>
-    </div>
-
   </div>
 </div>
+
+<script>
+  function mxSelectBundle(index) {
+    // 1. Highlight clicked card in the guide
+    var items = document.querySelectorAll('.mx-beard-guide__item');
+    items.forEach(function(item, idx) {
+      if (idx === index) {
+        item.classList.add('is-selected');
+      } else {
+        item.classList.remove('is-selected');
+      }
+    });
+
+    // 2. Select in Kaching Bundles
+    var kachingSelectors = [
+      '.kaching-bundles__deal',
+      '.kaching-bundles__deal-card',
+      '[class*="kaching-bundles__deal"]',
+      '[class*="deal-card"]',
+      '.kaching-bundle-deal',
+      '[data-deal-id]'
+    ];
+    
+    var clicked = false;
+    for (var i = 0; i < kachingSelectors.length; i++) {
+      var elements = document.querySelectorAll(kachingSelectors[i]);
+      if (elements && elements.length > index) {
+        elements[index].click();
+        clicked = true;
+        break;
+      }
+    }
+
+    if (!clicked) {
+      var inputs = document.querySelectorAll('input[type="radio"][name*="kaching"], [class*="kaching"] input[type="radio"]');
+      if (inputs && inputs.length > index) {
+        inputs[index].click();
+      }
+    }
+  }
+
+  // Sync back when Kaching is clicked directly
+  (function() {
+    function setupKachingSync() {
+      // Find Kaching Bundles container
+      var container = document.querySelector('[class*="kaching-bundles"]');
+      if (!container) return;
+
+      container.addEventListener('click', function(e) {
+        // Detect which deal card was clicked
+        var dealCard = e.target.closest('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]');
+        if (!dealCard) return;
+
+        // Find index of clicked deal card
+        var cards = Array.from(container.querySelectorAll('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]'));
+        var index = cards.indexOf(dealCard);
+        
+        if (index >= 0 && index < 2) {
+          var guideItems = document.querySelectorAll('.mx-beard-guide__item');
+          guideItems.forEach(function(item, idx) {
+            item.classList.toggle('is-selected', idx === index);
+          });
+        }
+      });
+
+      // Initially mark the active one based on Kaching checked radio or class
+      setTimeout(function() {
+        var cards = container.querySelectorAll('.kaching-bundles__deal, .kaching-bundles__deal-card, [class*="kaching-bundles__deal"], [class*="deal-card"]');
+        cards.forEach(function(card, idx) {
+          // Kaching usually adds a selected class like is-selected, active, or checked
+          var isSelected = card.classList.contains('is-selected') || 
+                           card.classList.contains('active') || 
+                           card.querySelector('input[type="radio"]:checked') !== null ||
+                           card.getAttribute('aria-checked') === 'true';
+          if (isSelected && idx < 2) {
+            var guideItems = document.querySelectorAll('.mx-beard-guide__item');
+            if (guideItems[idx]) {
+              guideItems[idx].classList.add('is-selected');
+            }
+          }
+        });
+      }, 1000);
+    }
+
+    // Run setup after load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupKachingSync);
+    } else {
+      setTimeout(setupKachingSync, 1000);
+    }
+  })();
+</script>
 
 <style>
   .mx-beard-guide {
@@ -51,8 +136,8 @@
 
   .mx-beard-guide__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .mx-beard-guide__item {
@@ -60,22 +145,38 @@
     background: #fff;
     border: 1px solid #e0d9c8;
     border-radius: 6px;
-    padding: 14px 8px 10px 8px;
+    padding: 16px 8px 12px 8px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    user-select: none;
   }
 
-  .mx-beard-guide__item.is-popular {
+  .mx-beard-guide__item:hover {
+    transform: translateY(-2px);
     border-color: #b89a52;
-    background: #fffdf9;
+    box-shadow: 0 6px 12px rgba(184, 154, 82, 0.12);
   }
 
-  .mx-beard-guide__item.is-recommended {
-    border-color: #0c0b0a;
-    background: #fafaf8;
+  .mx-beard-guide__item.is-selected {
+    border-color: #b89a52;
+    background: #fffdf8;
+    box-shadow: 0 4px 14px rgba(184, 154, 82, 0.22);
+    transform: scale(1.02);
+  }
+
+  .mx-beard-guide__item.is-selected::after {
+    content: '✓';
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #b89a52;
   }
 
   .mx-beard-guide__badge {
@@ -97,11 +198,6 @@
 
   .mx-beard-guide__badge--gold {
     background: #b89a52;
-  }
-
-  .mx-beard-guide__item.is-recommended .mx-beard-guide__badge {
-    background: #0c0b0a;
-    color: #b89a52;
   }
 
   .mx-beard-guide__option {
@@ -126,7 +222,7 @@
   .mx-beard-guide__desc {
     font-size: 9px;
     color: #6c6659;
-    line-height: 1.25;
+    line-height: 1.3;
     margin: 0 !important;
   }
 
@@ -142,13 +238,13 @@
     background: #1e1b17;
     border-color: rgba(184,154,82,0.15);
   }
-  .m-color-dark .mx-beard-guide__item.is-popular {
+  .m-color-dark .mx-beard-guide__item:hover {
     border-color: #b89a52;
-    background: #23201a;
   }
-  .m-color-dark .mx-beard-guide__item.is-recommended {
-    border-color: #f5f2ea;
+  .m-color-dark .mx-beard-guide__item.is-selected {
     background: #25221d;
+    border-color: #b89a52;
+    box-shadow: 0 4px 16px rgba(184,154,82,0.3);
   }
   .m-color-dark .mx-beard-guide__option {
     color: #f5f2ea;
@@ -162,10 +258,10 @@
       padding: 12px 10px;
     }
     .mx-beard-guide__grid {
-      gap: 6px;
+      gap: 8px;
     }
     .mx-beard-guide__item {
-      padding: 12px 4px 8px 4px;
+      padding: 14px 4px 10px 4px;
     }
     .mx-beard-guide__option {
       font-size: 13px;
@@ -175,6 +271,7 @@
     }
     .mx-beard-guide__desc {
       font-size: 8px;
+      line-height: 1.25;
     }
     .mx-beard-guide__badge {
       font-size: 7px;

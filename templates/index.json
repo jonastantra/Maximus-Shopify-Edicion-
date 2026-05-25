@@ -82,6 +82,17 @@
           "settings": {
             "custom_liquid": "{% if section.settings.featured_product != blank %}{% assign featured_prod = all_products[section.settings.featured_product] %}{% if featured_prod.handle contains 'balsamo' or featured_prod.handle contains 'minoxidil' or featured_prod.handle contains 'balsam' %}{% render 'mx-beard-guide', product: featured_prod %}{% endif %}{% endif %}"
           }
+        },
+        "shipping_HGzjtW": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": true,
+            "deliver_text": "Entrega estimada:",
+            "deliver_days": "4",
+            "date_format": "%b %d",
+            "show_shipping_text": true,
+            "shipping_text": "<p><strong>Envio GRATIS incluido</strong> en pedidos desde $699 MXN.<br/><strong>Garantia Maximus:</strong> 30 dias de satisfaccion total.<br/><strong>Empaque discreto</strong> y pago seguro.</p>"
+          }
         }
       },
       "block_order": [
@@ -92,7 +103,8 @@
         "price_AiNUdf",
         "inventory_status_GqjdNU",
         "variant_picker_ccJyfj",
-        "buy_buttons_Q3DXGX"
+        "buy_buttons_Q3DXGX",
+        "shipping_HGzjtW"
       ],
       "custom_css": [],
       "name": "Featured product",

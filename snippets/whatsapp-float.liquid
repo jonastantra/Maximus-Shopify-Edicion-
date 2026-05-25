@@ -193,7 +193,14 @@
       var hasShownBubble = false;
 
       function getRevealPoint() {
-        return 80;
+        var target = document.querySelector('.mx-landing-product') || 
+                     document.querySelector('form[action="/cart/add"]') || 
+                     document.getElementById('Tag-Comprar');
+        if (target) {
+          var rect = target.getBoundingClientRect();
+          return rect.bottom + window.scrollY;
+        }
+        return 900;
       }
 
       function closeBubble() {

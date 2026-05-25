@@ -344,27 +344,29 @@
 
     .mx-hero__shade {
       background:
-        linear-gradient(180deg, rgba(8,7,6,0.10) 0%, rgba(8,7,6,0.04) 36%, rgba(8,7,6,0.0) 70%, rgba(8,7,6,0.08) 100%),
-        linear-gradient(90deg, rgba(8,7,6,0.16) 0%, rgba(8,7,6,0.0) 78%);
+        linear-gradient(180deg, rgba(8,7,6,0.0) 0%, rgba(8,7,6,0.2) 36%, rgba(8,7,6,0.68) 100%),
+        linear-gradient(90deg, rgba(8,7,6,0.24) 0%, rgba(8,7,6,0.0) 80%);
     }
 
     .mx-hero__container {
       align-items: flex-end;
-      padding: 300px 18px 84px;
+      padding: 300px 18px 32px;
     }
 
     .mx-hero__content {
-      width: 76%;
-      max-width: 300px;
-      min-height: 270px;
+      width: 92%;
+      max-width: 350px;
+      min-height: 190px;
     }
 
     .mx-hero__content::before {
-      inset: -20px -14px -24px -14px;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,0.26) 0%, rgba(0,0,0,0.14) 58%, rgba(0,0,0,0.0) 100%),
-        linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.0) 100%);
-      border-radius: 2px;
+      inset: -12px -16px -12px -16px;
+      background: rgba(12, 11, 10, 0.40);
+      border-radius: 8px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(199, 167, 93, 0.14);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
     }
 
     .mx-hero__slide:nth-child(1) .mx-hero__img { object-position: 56% center; }
@@ -376,7 +378,7 @@
     .mx-hero__eyebrow {
       font-size: 9px;
       letter-spacing: 0.22em;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .mx-hero__eyebrow::before,
@@ -385,17 +387,17 @@
     }
 
     .mx-hero__title {
-      font-size: clamp(28px, 8.6vw, 38px);
+      font-size: clamp(24px, 7.5vw, 32px);
       line-height: 0.95 !important;
-      margin-bottom: 10px;
-      max-width: 280px;
+      margin-bottom: 6px;
+      max-width: 320px;
     }
 
     .mx-hero__desc {
-      max-width: 270px;
-      font-size: 11.5px;
-      line-height: 1.48 !important;
-      margin-bottom: 12px;
+      max-width: 100%;
+      font-size: 11px;
+      line-height: 1.4 !important;
+      margin-bottom: 10px;
     }
 
     .mx-hero__proof {
@@ -418,7 +420,7 @@
     }
 
     .mx-hero__dots {
-      bottom: 18px;
+      bottom: 12px;
     }
   }
 </style>
